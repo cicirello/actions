@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html amp lang=en itemscope itemtype="http://schema.org/WebPage" itemref="logo">
+<head>
+<meta charset=utf-8>
+<link rel="canonical" href="https://actions.cicirello.org/jacoco-badge-generator/">
+<link itemprop="url" href="https://actions.cicirello.org/jacoco-badge-generator/">
+<meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1">
+<meta name="title" content="jacoco-badge-generator - Coverage badges, and pull request coverage checks, from JaCoCo reports in GitHub Actions">
+<meta itemprop="name" content="jacoco-badge-generator - Coverage badges, and pull request coverage checks, from JaCoCo reports in GitHub Actions">
+<meta name="description" content="The jacoco-badge-generator GitHub Action parses a jacoco.csv from a JaCoCo coverage report, computes C0 and C1 coverage percentages from JaCoCo's Instructions and Branches counters, and generates badges for one or both of these (configurable with action inputs) to provide an easy to read visual summary of the code coverage of your test cases. The action supports both the basic case of a single jacoco.csv, as well as multi-module projects in which case the action can produce coverage badges from the combination of the JaCoCo reports from all modules, provided that the individual reports are independent. The jacoco-badge-generator can also optionally be used as part of a pull-request check. Specifically, you can configure it to fail the workflow run if coverage decreased relative to prior run, and/or if coverage is below a target threshold.">
+<meta itemprop="description" content="The jacoco-badge-generator GitHub Action parses a jacoco.csv from a JaCoCo coverage report, computes C0 and C1 coverage percentages from JaCoCo's Instructions and Branches counters, and generates badges for one or both of these (configurable with action inputs) to provide an easy to read visual summary of the code coverage of your test cases. The action supports both the basic case of a single jacoco.csv, as well as multi-module projects in which case the action can produce coverage badges from the combination of the JaCoCo reports from all modules, provided that the individual reports are independent. The jacoco-badge-generator can also optionally be used as part of a pull-request check. Specifically, you can configure it to fail the workflow run if coverage decreased relative to prior run, and/or if coverage is below a target threshold.">
+<title>jacoco-badge-generator - Coverage badges, and pull request coverage checks, from JaCoCo reports in GitHub Actions</title>
+<link rel="icon" href="/images/favicon.svg" sizes="any" type="image/svg+xml">
+<style amp-custom>
+header, nav, footer, article, aside, section { display: block; }
+footer { clear: both; }
+body { background-color: #f6f0bb; font-family: Arial, Helvetica, sans-serif; }
+#siteheader, aside, footer { background-color: #bfd9bf; }
+#siteheader, aside, footer, article { border: 2px solid #4CAF50; border-radius: 25px; margin: 10px; padding: 10px; }
+h1, h2, h3, h4, h5, h6, strong { color: #862d2d; }
+h2, h3 { text-align:center; }
+a { color: #4CAF50; }
+a:visited { color:#862d2d; }
+nav ul { list-style-type: none; margin: 0px; padding: 0; overflow: hidden; }
+nav li { float: left; margin-right: 8px; }
+nav li a { display: block; background-color: #f6f0bb; border: 2px solid #4CAF50; text-decoration: none; text-align: center; color: #666; border-bottom: none; border-radius: 12px 12px 0px 0px; padding: 6px 12px;}
+nav li a:visited { color: #666; }
+nav li a:hover:not(.active) { background-color: #305030; color: white; }
+nav li a.active { background-color: #4CAF50; }
+article li { margin-bottom: 8px; margin-top: 8px; }
+.publist li { margin-bottom: 16px; }
+.publist ul { margin-bottom: 32px; }
+section li { margin-bottom: 16px; }
+section ul { margin-bottom: 32px; }
+#copyright { text-align: center; color: #862d2d; }
+#logo, #backup-logo {max-width: 1280px;}
+amp-img.contain img { object-fit: contain; }
+.badge-height { position: relative; width: 100%; height: 20px;}
+th { text-align: left; }
+table, th, td { border: 1px solid black; }
+th, td { padding: 15px; }
+</style>
+<style amp-boilerplate>
+  body {
+	-webkit-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+	-moz-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+	-ms-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+	animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+  }
+  @-webkit-keyframes -amp-start {
+	from {
+	  visibility: hidden;
+	}
+	to {
+	  visibility: visible;
+	}
+  }
+  @-moz-keyframes -amp-start {
+	from {
+	  visibility: hidden;
+	}
+	to {
+	  visibility: visible;
+	}
+  }
+  @-ms-keyframes -amp-start {
+	from {
+	  visibility: hidden;
+	}
+	to {
+	  visibility: visible;
+	}
+  }
+  @-o-keyframes -amp-start {
+	from {
+	  visibility: hidden;
+	}
+	to {
+	  visibility: visible;
+	}
+  }
+  @keyframes -amp-start {
+	from {
+	  visibility: hidden;
+	}
+	to {
+	  visibility: visible;
+	}
+  }
+</style>
+<noscript><style amp-boilerplate>
+	body {
+	  -webkit-animation: none;
+	  -moz-animation: none;
+	  -ms-animation: none;
+	  animation: none;
+	}
+  </style></noscript>
+<script async src="https://cdn.ampproject.org/v0.js"></script>
+<script async custom-element="amp-carousel" src="https://cdn.ampproject.org/v0/amp-carousel-0.1.js"></script>
+</head>
+<body>
+<header itemprop="hasPart" itemscope itemtype="https://schema.org/WPHeader" id="siteheader">
+<div itemscope>
+<h1>
+<a href=".">
+<amp-img id="logo" itemprop="primaryImageOfPage" itemscope itemtype="http://schema.org/ImageObject" 
+  src="/images/jacoco-badge-generator.webp" 
+  alt="jacoco-badge-generator - Coverage badges, and pull request coverage checks, from JaCoCo reports in GitHub Actions" 
+  width="1280" 
+  height="640" 
+  layout="responsive"
+  srcset="/images/jacoco-badge-generator.webp 1280w,
+          /images/jacoco-badge-generator960.webp 960w,
+          /images/jacoco-badge-generator640.webp 640w,
+		  /images/jacoco-badge-generator320.webp 320w">
+  <amp-img id="backup-logo"  
+    fallback
+    src="/images/jacoco-badge-generator.png" 
+    alt="jacoco-badge-generator - Coverage badges, and pull request coverage checks, from JaCoCo reports in GitHub Actions" 
+    width="1280" 
+    height="640" 
+    layout="responsive"
+    srcset="/images/jacoco-badge-generator.png 1280w,
+	        /images/jacoco-badge-generator960.png 960w,
+            /images/jacoco-badge-generator640.png 640w,
+		    /images/jacoco-badge-generator320.png 320w">
+  </amp-img>
+</amp-img>
+</a>
+</h1>
+<nav>
+<ul>
+<li><a href="https://github.com/marketplace/actions/jacoco-badge-generator">GitHub Marketplace</a></li>
+<li><a href="https://github.com/cicirello/jacoco-badge-generator">GitHub Repo</a></li>
+<li><a href="https://github.com/cicirello/jacoco-badge-generator/issues">Issue Tracker</a></li>
+<li><a href="https://github.com/cicirello/jacoco-badge-generator/blob/main/CHANGELOG.md">ChangeLog</a></li>
+</ul>
+</nav>
+</div>
+</header>
+<article itemprop="mainEntity" itemscope itemtype="http://schema.org/SoftwareSourceCode">
+<h2 itemprop="name">jacoco-badge-generator</h2>
+<section itemprop="description">
+<h3>Overview</h3>
+<p>The <a href="https://github.com/cicirello/jacoco-badge-generator">jacoco-badge-generator 
+GitHub Action</a> parses a jacoco.csv file from a JaCoCo coverage report,
+computes C0 and C1 coverage percentages 
+from <a href="https://www.jacoco.org/jacoco/trunk/doc/counters.html">JaCoCo's 
+Instructions and Branches counters</a>, and 
+generates badges for one or both of these (configurable with action inputs) to provide an easy 
+to read visual summary of the code coverage of your test cases. The action supports
+both the basic case of a single jacoco.csv, as well as multi-module projects in which
+case the action can produce coverage badges from the combination of the JaCoCo reports
+from all modules, provided that the individual reports are independent.</p>
+<p>The jacoco-badge-generator can also optionally be used as 
+part of a pull-request check. Specifically, you can configure it to fail the 
+workflow run if coverage decreased relative to prior run, and/or if coverage is below
+a target threshold.</p>
+<p>The jacoco-badge-generator action is integrated directly into your CI/CD workflow
+within GitHub Actions. It is implemented 
+in <span itemprop="programmingLanguage">Python</span>.
+The <a href="https://github.com/cicirello/jacoco-badge-generator" itemprop="codeRepository">jacoco-badge-generator source 
+code repository</a> is hosted on GitHub; and is licensed under 
+the <a itemprop="license" href="https://github.com/cicirello/jacoco-badge-generator/blob/main/LICENSE">MIT License</a>. 
+Also in the GitHub repository you will find detailed instructions for 
+use including several sample GitHub workflows.</p>
+<p itemprop="author copyrightHolder" itemscope itemtype="http://schema.org/Person">The 
+jacoco-badge-generator GitHub Action is developed by
+<a itemprop="url mainEntityOfPage" href="https://www.cicirello.org/"><span itemprop="name">Vincent 
+A. Cicirello</span></a>. It was originally implemented for my own use, but I have decided to
+share it with others.</p>
+</section>
+<section>
+<h3>Live Examples</h3>
+<amp-carousel height="220" layout="fixed-height" type="carousel">
+<table>
+<tr><th>Repository</th><th>Workflow</th><th>Build Configuration</th></tr>
+<tr>
+<td><a href="https://github.com/cicirello/Chips-n-Salsa">Chips-n-Salsa</a></td>
+<td><a href="https://github.com/cicirello/Chips-n-Salsa/blob/master/.github/workflows/build.yml">build.yml</a></td>
+<td><a href="https://github.com/cicirello/Chips-n-Salsa/blob/master/pom.xml">pom.xml</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/cicirello/JavaPermutationTools">JavaPermutationTools</a></td>
+<td><a href="https://github.com/cicirello/JavaPermutationTools/blob/master/.github/workflows/build.yml">build.yml</a></td>
+<td><a href="https://github.com/cicirello/JavaPermutationTools/blob/master/pom.xml">pom.xml</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/cicirello/ZigguratGaussian">ZigguratGaussian</a></td>
+<td><a href="https://github.com/cicirello/ZigguratGaussian/blob/master/.github/workflows/build.yml">build.yml</a></td>
+<td><a href="https://github.com/cicirello/ZigguratGaussian/blob/master/pom.xml">pom.xml</a></td>
+</tr>
+</table>
+</amp-carousel>
+</section>
+</article>
+<footer>
+<div id="copyright"><small>Copyright &copy; <span itemprop="copyrightYear">2021</span> <a href="https://www.cicirello.org/">Vincent A. Cicirello</a>.</small></div>
+</footer>
+</body>
+</html>

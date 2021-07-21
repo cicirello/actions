@@ -1,0 +1,4 @@
+User-agent: SemanticScholarBot
+Disallow: /
+
+Sitemap: https://actions.cicirello.org/sitemap.xml

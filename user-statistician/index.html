@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html amp lang=en itemscope itemtype="http://schema.org/WebPage" itemref="logo">
+<head>
+<meta charset=utf-8>
+<link rel="canonical" href="https://actions.cicirello.org/user-statistician/">
+<link itemprop="url" href="https://actions.cicirello.org/user-statistician/">
+<meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1">
+<meta name="title" content="user-statistician - Generate an SVG statistics card for your GitHub Profile README in GitHub Actions">
+<meta itemprop="name" content="user-statistician - Generate an SVG statistics card for your GitHub Profile README in GitHub Actions">
+<meta name="description" content="The cicirello/user-statistician GitHub Action generates a detailed visual summary of your activity on GitHub in the form of an SVG, suitable to display on your GitHub Profile README. Although the intended use-case is to generate an SVG image for your GitHub Profile README, you can also potentially link to the image from a personal website, or from anywhere else where you'd like to share your GitHub stats. The SVG that the action generates includes statistics for the repositories that you own, your contribution statistics (e.g., commits, issues, pull requests, etc), as well as a pie chart showing the distribution of languages within public repositories that you own. The user stats image can be customized, including the colors such as with one of the built-in themes or your own set of custom colors. You can also pick and choose which sections of the card to include.">
+<meta itemprop="description" content="The cicirello/user-statistician GitHub Action generates a detailed visual summary of your activity on GitHub in the form of an SVG, suitable to display on your GitHub Profile README. Although the intended use-case is to generate an SVG image for your GitHub Profile README, you can also potentially link to the image from a personal website, or from anywhere else where you'd like to share your GitHub stats. The SVG that the action generates includes statistics for the repositories that you own, your contribution statistics (e.g., commits, issues, pull requests, etc), as well as a pie chart showing the distribution of languages within public repositories that you own. The user stats image can be customized, including the colors such as with one of the built-in themes or your own set of custom colors. You can also pick and choose which sections of the card to include.">
+<title>user-statistician - Generate an SVG statistics card for your GitHub Profile README in GitHub Actions</title>
+<link rel="icon" href="/images/favicon.svg" sizes="any" type="image/svg+xml">
+<style amp-custom>
+header, nav, footer, article, aside, section { display: block; }
+footer { clear: both; }
+body { background-color: #f6f0bb; font-family: Arial, Helvetica, sans-serif; }
+#siteheader, aside, footer { background-color: #bfd9bf; }
+#siteheader, aside, footer, article { border: 2px solid #4CAF50; border-radius: 25px; margin: 10px; padding: 10px; }
+h1, h2, h3, h4, h5, h6, strong { color: #862d2d; }
+h2, h3 { text-align:center; }
+a { color: #4CAF50; }
+a:visited { color:#862d2d; }
+nav ul { list-style-type: none; margin: 0px; padding: 0; overflow: hidden; }
+nav li { float: left; margin-right: 8px; }
+nav li a { display: block; background-color: #f6f0bb; border: 2px solid #4CAF50; text-decoration: none; text-align: center; color: #666; border-bottom: none; border-radius: 12px 12px 0px 0px; padding: 6px 12px;}
+nav li a:visited { color: #666; }
+nav li a:hover:not(.active) { background-color: #305030; color: white; }
+nav li a.active { background-color: #4CAF50; }
+article li { margin-bottom: 8px; margin-top: 8px; }
+.publist li { margin-bottom: 16px; }
+.publist ul { margin-bottom: 32px; }
+section li { margin-bottom: 16px; }
+section ul { margin-bottom: 32px; }
+#copyright { text-align: center; color: #862d2d; }
+#logo, #backup-logo {max-width: 1280px;}
+amp-img.contain img { object-fit: contain; }
+.badge-height { position: relative; width: 100%; height: 20px;}
+th { text-align: left; }
+table, th, td { border: 1px solid black; }
+th, td { padding: 15px; }
+</style>
+<style amp-boilerplate>
+  body {
+	-webkit-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+	-moz-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+	-ms-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+	animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+  }
+  @-webkit-keyframes -amp-start {
+	from {
+	  visibility: hidden;
+	}
+	to {
+	  visibility: visible;
+	}
+  }
+  @-moz-keyframes -amp-start {
+	from {
+	  visibility: hidden;
+	}
+	to {
+	  visibility: visible;
+	}
+  }
+  @-ms-keyframes -amp-start {
+	from {
+	  visibility: hidden;
+	}
+	to {
+	  visibility: visible;
+	}
+  }
+  @-o-keyframes -amp-start {
+	from {
+	  visibility: hidden;
+	}
+	to {
+	  visibility: visible;
+	}
+  }
+  @keyframes -amp-start {
+	from {
+	  visibility: hidden;
+	}
+	to {
+	  visibility: visible;
+	}
+  }
+</style>
+<noscript><style amp-boilerplate>
+	body {
+	  -webkit-animation: none;
+	  -moz-animation: none;
+	  -ms-animation: none;
+	  animation: none;
+	}
+  </style></noscript>
+<script async src="https://cdn.ampproject.org/v0.js"></script>
+<script async custom-element="amp-carousel" src="https://cdn.ampproject.org/v0/amp-carousel-0.1.js"></script>
+</head>
+<body>
+<header itemprop="hasPart" itemscope itemtype="https://schema.org/WPHeader" id="siteheader">
+<div itemscope>
+<h1>
+<a href=".">
+<amp-img id="logo" itemprop="primaryImageOfPage" itemscope itemtype="http://schema.org/ImageObject" 
+  src="/images/user-statistician.webp" 
+  alt="user-statistician - Generate an SVG statistics card for your GitHub Profile README in GitHub Actions" 
+  width="1280" 
+  height="640" 
+  layout="responsive"
+  srcset="/images/user-statistician.webp 1280w,
+          /images/user-statistician960.webp 960w,
+          /images/user-statistician640.webp 640w,
+		  /images/user-statistician320.webp 320w">
+  <amp-img id="backup-logo"  
+    fallback
+    src="/images/user-statistician.png" 
+    alt="user-statistician - Generate an SVG statistics card for your GitHub Profile README in GitHub Actions" 
+    width="1280" 
+    height="640" 
+    layout="responsive"
+    srcset="/images/user-statistician.png 1280w,
+	        /images/user-statistician960.png 960w,
+            /images/user-statistician640.png 640w,
+		    /images/user-statistician320.png 320w">
+  </amp-img>
+</amp-img>
+</a>
+</h1>
+<nav>
+<ul>
+<li><a href="https://github.com/marketplace/actions/user-statistician">GitHub Marketplace</a></li>
+<li><a href="https://github.com/cicirello/user-statistician">GitHub Repo</a></li>
+<li><a href="https://github.com/cicirello/user-statistician/issues">Issue Tracker</a></li>
+<li><a href="https://github.com/cicirello/user-statistician/blob/main/CHANGELOG.md">ChangeLog</a></li>
+</ul>
+</nav>
+</div>
+</header>
+<article itemprop="mainEntity" itemscope itemtype="http://schema.org/SoftwareSourceCode">
+<h2 itemprop="name">user-statistician</h2>
+<section itemprop="description">
+<h3>Overview</h3>
+<p>The <a href="https://github.com/cicirello/user-statistician">cicirello/user-statistician 
+GitHub Action</a> generates a detailed visual 
+summary of your activity on GitHub in the form of an SVG, suitable to display on
+your <a href="https://docs.github.com/en/github/setting-up-and-managing-your-github-profile/customizing-your-profile/managing-your-profile-readme">GitHub Profile README</a>. For a live example, see
+<a href="https://github.com/cicirello">Vincent A. Cicirello's GitHub Profile</a>, 
+the developer of the action.  
+Although the intended use-case is to generate an SVG image for your GitHub 
+Profile README, you can also potentially link to the GitHub stats image from a 
+personal website, or from anywhere else where you'd like to share a summary of 
+your activity on GitHub. The SVG that the action generates includes statistics 
+for the repositories that you own, your contribution statistics (e.g., commits, 
+issues, pull requests, etc), as well as the distribution of languages within 
+public repositories that you own visualized as a pie chart. The user stats image 
+can be customized, including the colors such as with one of the built-in themes or your own set 
+of custom colors. You can also pick and choose which sections of the card to include.</p>
+<p>The user-statistician action runs entirely on GitHub, and is implemented 
+in <span itemprop="programmingLanguage">Python</span>. It 
+uses the <a href="https://docs.github.com/en/graphql">GitHub GraphQL API</a>
+to collect the necessary data. The contribution counts are as reported by the 
+GitHub GraphQL API. For details of how GitHub counts contributions, see 
+<a href="https://docs.github.com/en/github/setting-up-and-managing-your-github-profile/managing-contribution-graphs-on-your-profile/why-are-my-contributions-not-showing-up-on-my-profile">GitHub's documentation</a>.
+The repository, contribution, and language data included on the card is all 
+public. This is true even of the Private Contributions entry on the stats image, as 
+the restrictedContributionsCount returned from the query executed by the action 
+will only be non-zero if you have opted in to sharing private contributions via 
+<a href="https://docs.github.com/en/github/setting-up-and-managing-your-github-profile/managing-contribution-graphs-on-your-profile/publicizing-or-hiding-your-private-contributions-on-your-profile">GitHub's profile settings</a>. 
+You can also hide the Private Contributions entry regardless of your GitHub 
+settings, or any of the other entries that you don't want to display. Each 
+statistic also auto-hides if the associated count is 0.</p>
+<p>To use the user-statistician GitHub action, you just need to set up a workflow in your
+profile repository (or technically any repository that you own) on a schedule (daily
+should be sufficient), and then add a link to the image in your README. The action 
+handles committing and pushing the generated image to the repository. If you
+don't already have a GitHub Profile README, start by creating a public repository
+with a name identical to your user name, and everything you include in the README.md of
+that repository will show up on your GitHub Profile at the 
+address: https://github.com/USERNAME.</p>
+<p><b>Motivation:</b> The reasons that we decided to create the 
+user-statistician GitHub Action include the following:</p>
+<ol>
+<li>We wanted to include more detailed stats all in a single SVG.</li>
+<li>We wanted something that runs entirely within GitHub.</li>
+<li>We wanted something that updated the SVG on a schedule 
+(e.g., daily), rather than on-demand, for the following reasons:
+<ul>
+<li>The SVG is simply served when requested, avoiding the delay 
+associated with waiting for API queries to gather the data to generate the SVG.</li> 
+<li>The API queries associated with generating the SVG happen once per 
+cycle of your configured schedule, regardless of how frequently your 
+profile is visited, decreasing system load.</li>
+</ul></li>
+</ol>
+<p>The <a href="https://github.com/cicirello/user-statistician" itemprop="codeRepository">user-statistician source 
+code repository</a> is hosted on GitHub; and is licensed under 
+the <a itemprop="license" href="https://github.com/cicirello/user-statistician/blob/main/LICENSE">MIT License</a>. 
+Also in the GitHub repository you will find detailed instructions for 
+use including several sample ready-to-use GitHub workflows.</p>
+<p itemprop="author copyrightHolder" itemscope itemtype="http://schema.org/Person">The 
+user-statistician GitHub Action is developed by
+<a itemprop="url mainEntityOfPage" href="https://www.cicirello.org/"><span itemprop="name">Vincent 
+A. Cicirello</span></a>. It was originally implemented for my own use, but I have decided to
+share it with others.</p>
+</section>
+<section>
+<h3>Live Examples</h3>
+<amp-carousel height="110" layout="fixed-height" type="carousel">
+<table>
+<tr><th>Live Example</th><th>Workflow</th></tr>
+<tr>
+<td><a href="https://github.com/cicirello">Vincent A. Cicirello's GitHub Profile</a></td>
+<td><a href="https://github.com/cicirello/cicirello/blob/master/.github/workflows/userstats.yml">userstats.yml</a></td>
+</tr>
+</table>
+</amp-carousel>
+</section>
+</article>
+<footer>
+<div id="copyright"><small>Copyright &copy; <span itemprop="copyrightYear">2021</span> <a href="https://www.cicirello.org/">Vincent A. Cicirello</a>.</small></div>
+</footer>
+</body>
+</html>

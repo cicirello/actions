@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html amp lang=en itemscope itemtype="http://schema.org/WebPage" itemref="logo">
+<head>
+<meta charset=utf-8>
+<link rel="canonical" href="https://actions.cicirello.org/generate-sitemap/">
+<link itemprop="url" href="https://actions.cicirello.org/generate-sitemap/">
+<meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1">
+<meta name="title" content="generate-sitemap - Generate an XML sitemap for a GitHub pages site using GitHub Actions">
+<meta itemprop="name" content="generate-sitemap - Generate an XML sitemap for a GitHub pages site using GitHub Actions">
+<meta name="description" content="The generate-sitemap GitHub action generates a sitemap for a website hosted on GitHub Pages, and has the following features. Supports both xml and txt sitemaps. When generating an xml sitemap, it uses the last commit date of each file to generate the lastmod tag in the sitemap entry. If the file was created during that workflow run, but not yet committed, then it instead uses the current date. Supports URLs for html and pdf files in the sitemap, and has inputs to control the included file types. Also supports including URLs for a user specified list of additional file extensions in the sitemap. Checks content of html files for noindex directives, excluding any that contain them from the sitemap. Parses a robots.txt, if present at the root of the website, excluding any URLs from the sitemap that match disallow rules. Sorts the sitemap entries in a consistent order, such that the URLs are first sorted by depth in the directory structure (i.e., pages at the website root appear first, etc), and then pages at the same depth are sorted alphabetically. It assumes that for files with the name index.html that the preferred URL for the page ends with the enclosing directory, leaving out the index.html. Provides option to exclude .html extension from URLs listed in sitemap.">
+<meta itemprop="description" content="The generate-sitemap GitHub action generates a sitemap for a website hosted on GitHub Pages, and has the following features. Supports both xml and txt sitemaps. When generating an xml sitemap, it uses the last commit date of each file to generate the lastmod tag in the sitemap entry. If the file was created during that workflow run, but not yet committed, then it instead uses the current date. Supports URLs for html and pdf files in the sitemap, and has inputs to control the included file types. Also supports including URLs for a user specified list of additional file extensions in the sitemap. Checks content of html files for noindex directives, excluding any that contain them from the sitemap. Parses a robots.txt, if present at the root of the website, excluding any URLs from the sitemap that match disallow rules. Sorts the sitemap entries in a consistent order, such that the URLs are first sorted by depth in the directory structure (i.e., pages at the website root appear first, etc), and then pages at the same depth are sorted alphabetically. It assumes that for files with the name index.html that the preferred URL for the page ends with the enclosing directory, leaving out the index.html. Provides option to exclude .html extension from URLs listed in sitemap.">
+<title>generate-sitemap - Generate an XML sitemap for a GitHub pages site using GitHub Actions</title>
+<link rel="icon" href="/images/favicon.svg" sizes="any" type="image/svg+xml">
+<style amp-custom>
+header, nav, footer, article, aside, section { display: block; }
+footer { clear: both; }
+body { background-color: #f6f0bb; font-family: Arial, Helvetica, sans-serif; }
+#siteheader, aside, footer { background-color: #bfd9bf; }
+#siteheader, aside, footer, article { border: 2px solid #4CAF50; border-radius: 25px; margin: 10px; padding: 10px; }
+h1, h2, h3, h4, h5, h6, strong { color: #862d2d; }
+h2, h3 { text-align:center; }
+a { color: #4CAF50; }
+a:visited { color:#862d2d; }
+nav ul { list-style-type: none; margin: 0px; padding: 0; overflow: hidden; }
+nav li { float: left; margin-right: 8px; }
+nav li a { display: block; background-color: #f6f0bb; border: 2px solid #4CAF50; text-decoration: none; text-align: center; color: #666; border-bottom: none; border-radius: 12px 12px 0px 0px; padding: 6px 12px;}
+nav li a:visited { color: #666; }
+nav li a:hover:not(.active) { background-color: #305030; color: white; }
+nav li a.active { background-color: #4CAF50; }
+article li { margin-bottom: 8px; margin-top: 8px; }
+.publist li { margin-bottom: 16px; }
+.publist ul { margin-bottom: 32px; }
+section li { margin-bottom: 16px; }
+section ul { margin-bottom: 32px; }
+#copyright { text-align: center; color: #862d2d; }
+#logo, #backup-logo {max-width: 1280px;}
+amp-img.contain img { object-fit: contain; }
+.badge-height { position: relative; width: 100%; height: 20px;}
+th { text-align: left; }
+table, th, td { border: 1px solid black; }
+th, td { padding: 15px; }
+</style>
+<style amp-boilerplate>
+  body {
+	-webkit-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+	-moz-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+	-ms-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+	animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+  }
+  @-webkit-keyframes -amp-start {
+	from {
+	  visibility: hidden;
+	}
+	to {
+	  visibility: visible;
+	}
+  }
+  @-moz-keyframes -amp-start {
+	from {
+	  visibility: hidden;
+	}
+	to {
+	  visibility: visible;
+	}
+  }
+  @-ms-keyframes -amp-start {
+	from {
+	  visibility: hidden;
+	}
+	to {
+	  visibility: visible;
+	}
+  }
+  @-o-keyframes -amp-start {
+	from {
+	  visibility: hidden;
+	}
+	to {
+	  visibility: visible;
+	}
+  }
+  @keyframes -amp-start {
+	from {
+	  visibility: hidden;
+	}
+	to {
+	  visibility: visible;
+	}
+  }
+</style>
+<noscript><style amp-boilerplate>
+	body {
+	  -webkit-animation: none;
+	  -moz-animation: none;
+	  -ms-animation: none;
+	  animation: none;
+	}
+  </style></noscript>
+<script async src="https://cdn.ampproject.org/v0.js"></script>
+<script async custom-element="amp-carousel" src="https://cdn.ampproject.org/v0/amp-carousel-0.1.js"></script>
+</head>
+<body>
+<header itemprop="hasPart" itemscope itemtype="https://schema.org/WPHeader" id="siteheader">
+<div itemscope>
+<h1>
+<a href=".">
+<amp-img id="logo" itemprop="primaryImageOfPage" itemscope itemtype="http://schema.org/ImageObject" 
+  src="/images/generate-sitemap.webp" 
+  alt="generate-sitemap - Generate an XML sitemap for a GitHub pages site using GitHub Actions" 
+  width="1280" 
+  height="640" 
+  layout="responsive"
+  srcset="/images/generate-sitemap.webp 1280w,
+          /images/generate-sitemap960.webp 960w,
+          /images/generate-sitemap640.webp 640w,
+		  /images/generate-sitemap320.webp 320w">
+  <amp-img id="backup-logo"  
+    fallback
+    src="/images/generate-sitemap.png" 
+    alt="generate-sitemap - Generate an XML sitemap for a GitHub pages site using GitHub Actions" 
+    width="1280" 
+    height="640" 
+    layout="responsive"
+    srcset="/images/generate-sitemap.png 1280w,
+	        /images/generate-sitemap960.png 960w,
+            /images/generate-sitemap640.png 640w,
+		    /images/generate-sitemap320.png 320w">
+  </amp-img>
+</amp-img>
+</a>
+</h1>
+<nav>
+<ul>
+<li><a href="https://github.com/marketplace/actions/generate-sitemap">GitHub Marketplace</a></li>
+<li><a href="https://github.com/cicirello/generate-sitemap">GitHub Repo</a></li>
+<li><a href="https://github.com/cicirello/generate-sitemap/issues">Issue Tracker</a></li>
+<li><a href="https://github.com/cicirello/generate-sitemap/blob/master/CHANGELOG.md">ChangeLog</a></li>
+</ul>
+</nav>
+</div>
+</header>
+<article itemprop="mainEntity" itemscope itemtype="http://schema.org/SoftwareSourceCode">
+<h2 itemprop="name">generate-sitemap</h2>
+<section itemprop="description">
+<h3>Overview</h3>
+<p>The <a href="https://github.com/cicirello/generate-sitemap">generate-sitemap 
+GitHub action</a> generates a sitemap for a website hosted on GitHub Pages, and has 
+the following features:</p>
+<ul>
+<li>Support for both XML and txt sitemaps.</li>
+<li>When generating an XML sitemap, it uses the last commit date of 
+each file to generate the &lt;lastmod&gt; tag in the sitemap entry. If the 
+file was created during that workflow run, but not yet committed, then 
+it instead uses the current date.</li>
+<li>Supports URLs for html and pdf files in the sitemap, and has inputs 
+to control the included file types.</li>
+<li>Also supports including URLs for a user specified list of additional 
+file extensions in the sitemap.</li>
+<li>Checks content of html files noindex directives, excluding any 
+that do from the sitemap.</li>
+<li>Parses a robots.txt, if present at the root of the website, 
+excluding any URLs from the sitemap that match disallow rules.</li>
+<li>Sorts the sitemap entries in a consistent order, such that the URLs 
+are first sorted by depth in the directory structure (i.e., pages at 
+the website root appear first, etc), and then pages at the same depth 
+are sorted alphabetically.</li>
+<li>Assumes that for files with the name index.html that the preferred URL 
+for the page ends with the enclosing directory.</li>
+<li>Provides option to exclude .html extension from URLs listed in sitemap (GitHub
+Pages automatically serves the corresponding html file).</li>
+</ul>
+<p>The generate-sitemap GitHub Action is implemented 
+in <span itemprop="programmingLanguage">Python</span>, and the
+<a href="https://github.com/cicirello/generate-sitemap" itemprop="codeRepository">source code 
+repository</a> is hosted on GitHub; and it is licensed under 
+the <a itemprop="license" href="https://github.com/cicirello/generate-sitemap/blob/master/LICENSE">MIT License</a>. Also in the GitHub repository you will find detailed instructions for 
+use including several sample GitHub workflows.</p>
+<p itemprop="author copyrightHolder" itemscope itemtype="http://schema.org/Person">The 
+generate-sitemap GitHub Action is developed by
+<a itemprop="url mainEntityOfPage" href="https://www.cicirello.org/"><span itemprop="name">Vincent 
+A. Cicirello</span></a>. It was originally implemented for my own use, but I have decided to
+share it with others.</p>
+</section>
+<section>
+<h3>Live Examples</h3>
+<amp-carousel height="275" layout="fixed-height" type="carousel">
+<table>
+<tr><th>Website</th><th>Workflow</th><th>Sitemap Produced</th></tr>
+<tr>
+<td><a href="https://www.cicirello.org/">Vincent A. Cicirello's website</a></td>
+<td><a href="https://github.com/cicirello/cicirello.github.io/blob/master/.github/workflows/sitemap-generation.yml">sitemap-generation.yml</a></td>
+<td><a href="https://www.cicirello.org/sitemap.xml">sitemap.xml</a></td>
+</tr>
+<tr>
+<td><a href="https://actions.cicirello.org/">This website</a></td>
+<td><a href="https://github.com/cicirello/actions/blob/main/.github/workflows/sitemap-generation.yml">sitemap-generation.yml</a></td>
+<td><a href="https://actions.cicirello.org/sitemap.xml">sitemap.xml</a></td>
+</tr>
+<tr>
+<td>Documentation site for <a href="https://chips-n-salsa.cicirello.org/">Chips-n-Salsa</a></td>
+<td><a href="https://github.com/cicirello/Chips-n-Salsa/blob/master/.github/workflows/docs.yml">docs.yml</a></td>
+<td><a href="https://chips-n-salsa.cicirello.org/sitemap.xml">sitemap.xml</a></td>
+</tr>
+<tr>
+<td>Documentation site for <a href="https://jpt.cicirello.org/">JavaPermutationTools</a></td>
+<td><a href="https://github.com/cicirello/JavaPermutationTools/blob/master/.github/workflows/docs.yml">docs.yml</a></td>
+<td><a href="https://jpt.cicirello.org/sitemap.xml">sitemap.xml</a></td>
+</tr>
+</table>
+</amp-carousel>
+</section>
+</article>
+<footer>
+<div id="copyright"><small>Copyright &copy; <span itemprop="copyrightYear">2021</span> <a href="https://www.cicirello.org/">Vincent A. Cicirello</a>.</small></div>
+</footer>
+</body>
+</html>
