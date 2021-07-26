@@ -157,8 +157,10 @@ your activity on GitHub. The SVG that the action generates includes statistics
 for the repositories that you own, your contribution statistics (e.g., commits, 
 issues, pull requests, etc), as well as the distribution of languages within 
 public repositories that you own visualized as a pie chart. The user stats image 
-can be customized, including the colors such as with one of the built-in themes or your own set 
-of custom colors. You can also pick and choose which sections of the card to include.</p>
+can be customized, including the colors such as with one of the built-in themes 
+or your own set of custom colors. You can also pick and choose which sections 
+of the card to include, as well as the order of appearance of the sections; 
+and you can choose to hide individual stats.</p>
 <p>The user-statistician action runs entirely on GitHub, and is implemented 
 in <span itemprop="programmingLanguage">Python</span>. It 
 uses the <a href="https://docs.github.com/en/graphql">GitHub GraphQL API</a>
@@ -173,21 +175,22 @@ will only be non-zero if you have opted in to sharing private contributions via
 You can also hide the Private Contributions entry regardless of your GitHub 
 settings, or any of the other entries that you don't want to display. Each 
 statistic also auto-hides if the associated count is 0.</p>
-<p>To use the user-statistician GitHub action, you just need to set up a workflow in your
-profile repository (or technically any repository that you own) on a schedule (daily
-should be sufficient), and then add a link to the image in your README. The action 
-handles committing and pushing the generated image to the repository. If you
-don't already have a GitHub Profile README, start by creating a public repository
-with a name identical to your user name, and everything you include in the README.md of
-that repository will show up on your GitHub Profile at the 
-address: https://github.com/USERNAME.</p>
-<p><b>Motivation:</b> The reasons that we decided to create the 
-user-statistician GitHub Action include the following:</p>
-<ol>
-<li>We wanted to include more detailed stats all in a single SVG.</li>
-<li>We wanted something that runs entirely within GitHub.</li>
-<li>We wanted something that updated the SVG on a schedule 
-(e.g., daily), rather than on-demand, for the following reasons:
+<p>The user-statistician action runs entirely on GitHub. To use it, you just 
+need to set up a workflow in your GitHub Profile repository (or technically 
+any repository that you own) on a schedule (daily should be sufficient), 
+and then add a link to the image in your README. The action handles 
+committing and pushing the generated image to the repository.</p>
+<p><b>Features:</b> The features of the user-statistician GitHub 
+Action include the following:</p>
+<ul>
+<li>Generates detailed stats for your GitHub Profile README all in a single SVG.</li>
+<li>Ability to generate separate SVGs for the individual 
+categories of stats if you prefer.</li>
+<li>Highly customizable (color themes, custom colors, section ordering, custom title).</li>
+<li>Runs entirely on GitHub.</li>
+<li>Updates the SVG on a schedule of your choice (e.g., daily), 
+rather than on-demand when someone views your profile, which has 
+the following advantages:
 <ul>
 <li>The SVG is simply served when requested, avoiding the delay 
 associated with waiting for API queries to gather the data to generate the SVG.</li> 
@@ -195,7 +198,7 @@ associated with waiting for API queries to gather the data to generate the SVG.<
 cycle of your configured schedule, regardless of how frequently your 
 profile is visited, decreasing system load.</li>
 </ul></li>
-</ol>
+</ul>
 <p>The <a href="https://github.com/cicirello/user-statistician" itemprop="codeRepository">user-statistician source 
 code repository</a> is hosted on GitHub; and is licensed under 
 the <a itemprop="license" href="https://github.com/cicirello/user-statistician/blob/main/LICENSE">MIT License</a>. 
@@ -209,11 +212,10 @@ share it with others.</p>
 </section>
 <section>
 <h3>Live Examples</h3>
-<p>Both of these examples are generated within the same workflow,
-just in separate steps of the workflow run. The first example
-uses all of the default settings, except it switches the color
-theme to dark (my preference on GitHub). The second uses
-custom colors to match the color palette of my personal website.</p>
+<p>The first example below uses all of the default settings, 
+except it switches the color theme to dark (my preference 
+on GitHub). The second uses custom colors to match the 
+color palette of my personal website.</p>
 <amp-carousel height="165" layout="fixed-height" type="carousel">
 <table>
 <tr><th>Live Example</th><th>Workflow</th></tr>
@@ -223,7 +225,7 @@ custom colors to match the color palette of my personal website.</p>
 </tr>
 <tr>
 <td><a href="https://www.cicirello.org/software/#ghstats">Vincent A. Cicirello's personal website</a></td>
-<td><a href="https://github.com/cicirello/cicirello/blob/master/.github/workflows/userstats.yml">userstats.yml</a></td>
+<td><a href="https://github.com/cicirello/actions/blob/main/.github/workflows/userstats.yml">userstats.yml</a></td>
 </tr>
 </table>
 </amp-carousel>
