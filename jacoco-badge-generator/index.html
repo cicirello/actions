@@ -150,10 +150,14 @@ computes C0 and C1 coverage percentages
 from <a href="https://www.jacoco.org/jacoco/trunk/doc/counters.html">JaCoCo's 
 Instructions and Branches counters</a>, and 
 generates badges for one or both of these (configurable with action inputs) to provide an easy 
-to read visual summary of the code coverage of your test cases. The action supports
+to read visual summary of the code coverage of your test cases. The default behavior directly
+generates the badges internally with no external calls, but the action also provides an option
+to instead generate <a href="https://shields.io/endpoint">Shields JSON endpoints</a>. The action supports
 both the basic case of a single jacoco.csv, as well as multi-module projects in which
 case the action can produce coverage badges from the combination of the JaCoCo reports
-from all modules, provided that the individual reports are independent.</p>
+from all modules, provided that the individual reports are independent. It can also optionally
+generate a simple JSON summary report containing the computed coverages for easy consumption by
+other tools.</p>
 <p>The jacoco-badge-generator can also optionally be used as 
 part of a pull-request check. Specifically, you can configure it to fail the 
 workflow run if coverage decreased relative to prior run, and/or if coverage is below
