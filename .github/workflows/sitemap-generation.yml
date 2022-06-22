@@ -4,9 +4,6 @@ on:
   push:
     branches: [ main ]
     paths: [ '**.html' ]
-  pull_request:
-    branches: [ main ]
-    paths: [ '**.html' ]
 
 jobs:
   sitemap:
