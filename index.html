@@ -19,16 +19,21 @@ body { background-color: #f6f0bb; font-family: Arial, Helvetica, sans-serif; }
 #siteheader, aside, footer { background-color: #bfd9bf; }
 #siteheader, aside, footer, article { border: 2px solid #4CAF50; border-radius: 25px; margin: 10px; padding: 10px; }
 h1, h2, h3, h4, h5, h6, strong { color: #862d2d; }
-h2, h3, div.sponsor-badges, nav { text-align:center; }
-div.sponsor-badges amp-img { margin-top: 8px; }
+h2, h3, div.centered { text-align:center; }
+div.centered amp-img { margin-top: 8px; }
 a { color: #005500; }
 a:visited { color:#862d2d; }
-nav ul { list-style-type: none; margin: 0px; padding: 0; overflow: hidden; display: inline-block; }
-nav li { float: left; margin: 3px 8px 3px 0px; }
-nav li a { display: block; background-color: #f6f0bb; border: 2px solid #4CAF50; text-decoration: none; text-align: center; color: #1c2833; border-bottom: none; border-radius: 12px 12px 0px 0px; padding: 6px 12px;}
-nav li a:visited { color: #1c2833; }
-nav li a:hover:not(.active) { background-color: #305030; color: white; }
-nav li a.active { background-color: #4CAF50; }
+#toggle { position: absolute; left: -100vw; display: none; }
+nav { margin: 0px; padding: 0; overflow: hidden; display: inline-block; }
+nav div, #menu-icon { float: left; margin-right: 8px; }
+nav div a, #menu-icon { display: block; background-color: #f6f0bb; border: 2px solid #4CAF50; text-decoration: none; text-align: center; color: #1c2833; }
+nav div a { border-bottom: none; border-radius: 12px 12px 0px 0px; padding: 6px 12px; }
+nav div a:visited { color: #1c2833; }
+nav div a:hover:not(.active), #menu-icon:hover:not(.active) { background-color: #305030; color: white; }
+nav div a.active { background-color: #4CAF50; }
+nav div a:not(.active) { display: none; }
+#toggle:checked ~ div a:not(.active) { display: block; }
+#menu-icon { cursor: pointer; display: block; padding: 3px 7px 3px 7px; border-radius: 4px; }
 article li { margin-bottom: 8px; margin-top: 8px; }
 .publist li { margin-bottom: 16px; }
 .publist ul { margin-bottom: 32px; }
@@ -132,18 +137,18 @@ th, td { padding: 15px; }
 </amp-img>
 </a>
 </h1>
-<nav>
-<ul>
-<li><a href="/">Home</a></li>
-<li><a href="jacoco-badge-generator">jacoco-badge-generator</a></li>
-<li><a href="user-statistician">user-statistician</a></li>
-<li><a href="generate-sitemap">generate-sitemap</a></li>
-<li><a href="count-action-users">count-action-users</a></li>
-<li><a href="javadoc-cleanup">javadoc-cleanup</a></li>
-</ul>
-</nav>
+<div class="centered"><nav>
+<input type="checkbox" id="toggle">
+<label for="toggle" id="menu-icon">&#9776;</label>
+<div><a href="/" class="active">Home</a></div>
+<div><a href="jacoco-badge-generator">jacoco-badge-generator</a></div>
+<div><a href="user-statistician">user-statistician</a></div>
+<div><a href="generate-sitemap">generate-sitemap</a></div>
+<div><a href="count-action-users">count-action-users</a></div>
+<div><a href="javadoc-cleanup">javadoc-cleanup</a></div>
+</nav></div>
 </div>
-<div class="sponsor-badges">
+<div class="centered">
 <a href="https://github.com/sponsors/cicirello"><amp-img src="/images/github-sponsors.svg" alt="GitHub Sponsors" width="107" height="28">GitHub Sponsors</amp-img></a>
 <a href="https://liberapay.com/cicirello"><amp-img src="/images/Liberapay.svg" alt="Liberapay" width="119" height="28">Sponsor on Liberapay</amp-img></a>
 <a href="https://ko-fi.com/cicirello"><amp-img src="/images/ko-fi.svg" alt="Ko-Fi" width="82" height="28">Sponsor on Ko-Fi</amp-img></a>
