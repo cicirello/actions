@@ -138,6 +138,7 @@ th, td { padding: 15px; }
 <li><a href="https://github.com/cicirello/jacoco-badge-generator">GitHub Repo</a></li>
 <li><a href="https://github.com/cicirello/jacoco-badge-generator/issues">Issue Tracker</a></li>
 <li><a href="https://github.com/marketplace/actions/jacoco-badge-generator">GitHub Marketplace</a></li>
+<li><a href="https://pypi.org/project/jacoco-badge-generator/">PyPI</a></li>
 <li><a href="https://github.com/cicirello/jacoco-badge-generator/blob/main/CHANGELOG.md">ChangeLog</a></li>
 </ul>
 </nav>
@@ -152,27 +153,25 @@ th, td { padding: 15px; }
 <h2 itemprop="name">jacoco-badge-generator</h2>
 <section itemprop="description">
 <h3>Overview</h3>
-<p>The <a href="https://github.com/cicirello/jacoco-badge-generator">jacoco-badge-generator 
-GitHub Action</a> parses a jacoco.csv file from a JaCoCo coverage report,
-computes C0 and C1 coverage percentages 
-from <a href="https://www.jacoco.org/jacoco/trunk/doc/counters.html">JaCoCo's 
-Instructions and Branches counters</a>, and 
-generates badges for one or both of these (configurable with action inputs) to provide an easy 
-to read visual summary of the code coverage of your test cases. The default behavior directly
-generates the badges internally with no external calls, but the action also provides an option
-to instead generate <a href="https://shields.io/endpoint">Shields JSON endpoints</a>. The action supports
-both the basic case of a single jacoco.csv, as well as multi-module projects in which
-case the action can produce coverage badges from the combination of the JaCoCo reports
-from all modules, provided that the individual reports are independent. It can also optionally
-generate a simple JSON summary report containing the computed coverages for easy consumption by
-other tools.</p>
-<p>The jacoco-badge-generator can also optionally be used as 
-part of a pull-request check. Specifically, you can configure it to fail the 
-workflow run if coverage decreased relative to prior run, and/or if coverage is below
-a target threshold.</p>
-<p>The jacoco-badge-generator action is integrated directly into your CI/CD workflow
-within GitHub Actions. It is implemented 
-in <span itemprop="programmingLanguage">Python</span>.
+<p>The <a href="https://github.com/cicirello/jacoco-badge-generator">jacoco-badge-generator</a> can be 
+used in one of two ways: as a GitHub Action or as a command-line utility (e.g., such as part of a local 
+build script). The jacoco-badge-generator parses a jacoco.csv from a JaCoCo coverage report, computes 
+C0 and C1 coverage percentages from <a href="https://www.jacoco.org/jacoco/trunk/doc/counters.html">JaCoCo's 
+Instructions and Branches counters</a>, and generates badges for one or both of these (user configurable) 
+to provide an easy to read visual summary of the code coverage of your test cases. The default behavior 
+directly generates the badges internally with no external calls, but the action also provides an option
+to instead generate <a href="https://shields.io/endpoint">Shields JSON endpoints</a>. It supports
+both the basic case of a single jacoco.csv, as well as multi-module projects in which case the action can 
+produce coverage badges from the combination of the JaCoCo reports from all modules, provided that the 
+individual reports are independent. It can also optionally generate a simple JSON summary report containing 
+the computed coverages for easy consumption by other tools.</p>
+<p>When used as a GitHub Action, the jacoco-badge-generator can also optionally be used as part of a pull-request 
+check. Specifically, you can configure it to fail the workflow run if coverage decreased relative to prior run, 
+and/or if coverage is below a target threshold.</p>
+<p>The jacoco-badge-generator can be integrated directly into your 
+<a href="https://github.com/marketplace/actions/jacoco-badge-generator">CI/CD workflow within GitHub Actions</a>, 
+or it can be used as a command-line utility (<a href="https://pypi.org/project/jacoco-badge-generator/">installable 
+for this purpose from PyPI</a>). It is implemented in <span itemprop="programmingLanguage">Python</span>.
 The <a href="https://github.com/cicirello/jacoco-badge-generator" itemprop="codeRepository">jacoco-badge-generator source 
 code repository</a> is hosted on GitHub; and is licensed under 
 the <a itemprop="license" href="https://github.com/cicirello/jacoco-badge-generator/blob/main/LICENSE">MIT License</a>. 
@@ -185,7 +184,7 @@ A. Cicirello</span></a>. It was originally implemented for my own use, but I hav
 share it with others.</p>
 </section>
 <section>
-<h3>Live Examples</h3>
+<h3>Live GitHub Actions Examples</h3>
 <p>We have a <a href="https://github.com/cicirello/examples-jacoco-badge-generator">template 
 repository</a> containing a simple Java project (Maven),
 and several runnable example workflows demonstrating the most common use-cases.
@@ -208,9 +207,9 @@ action.</p>
 <td><a href="https://github.com/cicirello/JavaPermutationTools/blob/master/pom.xml">pom.xml</a></td>
 </tr>
 <tr>
-<td><a href="https://github.com/cicirello/ZigguratGaussian">ZigguratGaussian</a></td>
-<td><a href="https://github.com/cicirello/ZigguratGaussian/blob/master/.github/workflows/build.yml">build.yml</a></td>
-<td><a href="https://github.com/cicirello/ZigguratGaussian/blob/master/pom.xml">pom.xml</a></td>
+<td><a href="https://github.com/cicirello/rho-mu">&rho;&mu;</a></td>
+<td><a href="https://github.com/cicirello/rho-mu/blob/main/.github/workflows/build.yml">build.yml</a></td>
+<td><a href="https://github.com/cicirello/rho-mu/blob/main/pom.xml">pom.xml</a></td>
 </tr>
 </table>
 </amp-carousel>
