@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html amp lang=en itemscope itemtype="http://schema.org/WebPage" itemref="logo">
+<head>
+<meta charset=utf-8>
+<link rel="canonical" href="https://actions.cicirello.org/pyaction/">
+<link itemprop="url" href="https://actions.cicirello.org/pyaction/">
+<meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1">
+<meta name="title" content="pyaction - A Docker container with Python, git, and the Github CLI">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta itemprop="name" content="pyaction - A Docker container with Python, git, and the Github CLI">
+<meta name="description" content="The pyaction Docker container is designed to support implementing Github Actions with Python. It starts with the official python slim docker image as the base, using slim to keep the image size down for faster loading of Github Actions that use pyaction. The pyaction container also includes curl, gpg, git, and the GitHub CLI.">
+<meta itemprop="description" content="The pyaction Docker container is designed to support implementing Github Actions with Python. It starts with the official python slim docker image as the base, using slim to keep the image size down for faster loading of Github Actions that use pyaction. The pyaction container also includes curl, gpg, git, and the GitHub CLI.">
+<title>pyaction - A Docker container with Python, git, and the Github CLI</title>
+<link rel="icon" href="/images/favicon.svg" sizes="any" type="image/svg+xml">
+<meta property="og:url" content="https://actions.cicirello.org/pyaction/">
+<meta property="og:title" content="pyaction - A Docker container with Python, git, and the Github CLI">
+<meta property="og:image" content="https://actions.cicirello.org/images/pyaction.png">
+<meta property="og:image:width" content="1280">
+<meta property="og:image:height" content="640">
+<meta property="og:type" content="website">
+<meta property="og:description" content="The pyaction Docker container is designed to support implementing Github Actions with Python. It starts with the official python slim docker image as the base, using slim to keep the image size down for faster loading of Github Actions that use pyaction. The pyaction container also includes curl, gpg, git, and the GitHub CLI.">
+<style amp-custom>
+header, nav, footer, article, aside, section { display: block; }
+footer { clear: both; }
+body { background-color: #f6f0bb; font-family: Arial, Helvetica, sans-serif; }
+#siteheader, aside, footer { background-color: #bfd9bf; }
+#siteheader, aside, footer, article { border: 2px solid #4CAF50; border-radius: 25px; margin: 10px; padding: 10px; }
+h1, h2, h3, h4, h5, h6, strong { color: #862d2d; }
+h2, h3, div.sponsor-badges { text-align:center; }
+div.sponsor-badges amp-img { margin-top: 8px; }
+a { color: #005500; }
+a:visited { color:#862d2d; }
+#toggle { position: absolute; left: -100vw; display: none; }
+nav { margin: 0px; padding: 0; overflow: hidden; display: inline-block; }
+nav div, #menu-icon { float: left; margin-right: 8px; }
+nav div a, #menu-icon { display: block; background-color: #f6f0bb; border: 2px solid #4CAF50; text-decoration: none; text-align: center; color: #1c2833; }
+nav div a { border-bottom: none; border-radius: 12px 12px 0px 0px; padding: 6px 12px; }
+nav div a:visited { color: #1c2833; }
+nav div a:hover:not(.active), #menu-icon:hover:not(.active) { background-color: #305030; color: white; }
+nav div a.active { background-color: #4CAF50; }
+nav div a:not(.active) { display: none; }
+#toggle:checked ~ div a:not(.active) { display: block; }
+#menu-icon { cursor: pointer; display: block; padding: 3px 7px 3px 7px; border-radius: 4px; }
+article li { margin-bottom: 8px; margin-top: 8px; }
+.publist li { margin-bottom: 16px; }
+.publist ul { margin-bottom: 32px; }
+section li { margin-bottom: 16px; }
+section ul { margin-bottom: 32px; }
+#copyright { text-align: center; color: #862d2d; }
+#logo, #backup-logo, h1 {max-width: 1280px;}
+h1 {margin: 10px auto; padding: 10px;}
+amp-img.contain img { object-fit: contain; }
+.badge-height { position: relative; width: 100%; height: 20px;}
+th { text-align: left; }
+table, th, td { border: 1px solid black; }
+th, td { padding: 15px; }
+@media screen and (min-width:601px){
+#menu-icon { display: none; }
+nav div a:not(.active) { display: block; }
+}
+</style>
+<style amp-boilerplate>
+  body {
+	-webkit-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+	-moz-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+	-ms-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+	animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+  }
+  @-webkit-keyframes -amp-start {
+	from {
+	  visibility: hidden;
+	}
+	to {
+	  visibility: visible;
+	}
+  }
+  @-moz-keyframes -amp-start {
+	from {
+	  visibility: hidden;
+	}
+	to {
+	  visibility: visible;
+	}
+  }
+  @-ms-keyframes -amp-start {
+	from {
+	  visibility: hidden;
+	}
+	to {
+	  visibility: visible;
+	}
+  }
+  @-o-keyframes -amp-start {
+	from {
+	  visibility: hidden;
+	}
+	to {
+	  visibility: visible;
+	}
+  }
+  @keyframes -amp-start {
+	from {
+	  visibility: hidden;
+	}
+	to {
+	  visibility: visible;
+	}
+  }
+</style>
+<noscript><style amp-boilerplate>
+	body {
+	  -webkit-animation: none;
+	  -moz-animation: none;
+	  -ms-animation: none;
+	  animation: none;
+	}
+  </style></noscript>
+<script async src="https://cdn.ampproject.org/v0.js"></script>
+<script async custom-element="amp-carousel" src="https://cdn.ampproject.org/v0/amp-carousel-0.1.js"></script>
+</head>
+<body>
+<header itemprop="hasPart" itemscope itemtype="https://schema.org/WPHeader" id="siteheader">
+<div itemscope>
+<h1>
+<a href=".">
+<amp-img id="logo" itemprop="primaryImageOfPage" itemscope itemtype="http://schema.org/ImageObject" 
+  src="/images/pyaction.webp" 
+  alt="pyaction - A Docker container with Python, git, and the Github CLI" 
+  width="1280" 
+  height="640" 
+  layout="responsive"
+  srcset="/images/pyaction.webp 1280w,
+          /images/pyaction960.webp 960w,
+          /images/pyaction640.webp 640w,
+		  /images/pyaction320.webp 320w">
+  <amp-img id="backup-logo"  
+    fallback
+    src="/images/pyaction.png" 
+    alt="pyaction - A Docker container with Python, git, and the Github CLI" 
+    width="1280" 
+    height="640" 
+    layout="responsive"
+    srcset="/images/pyaction.png 1280w,
+	        /images/pyaction960.png 960w,
+            /images/pyaction640.png 640w,
+		    /images/pyaction320.png 320w">
+  </amp-img>
+</amp-img>
+</a>
+</h1>
+<nav>
+<input type="checkbox" id="toggle">
+<label for="toggle" id="menu-icon">&#9776;</label>
+<div><a href="/">Home</a></div>
+<div><a href="/pyaction" class="active">pyaction</a></div>
+<div><a href="https://github.com/cicirello/pyaction/pkgs/container/pyaction">GHCR</a></div>
+<div><a href="https://hub.docker.com/r/cicirello/pyaction">Docker</a></div>
+<div><a href="https://github.com/cicirello/pyaction">Source code</a></div>
+<div><a href="https://github.com/cicirello/pyaction/issues">Issue Tracker</a></div>
+<div><a href="https://github.com/cicirello/pyaction/blob/master/CHANGELOG.md">ChangeLog</a></div>
+</nav>
+</div>
+<div class="sponsor-badges">
+<a href="https://github.com/sponsors/cicirello"><amp-img src="/images/github-sponsors.svg" alt="GitHub Sponsors" width="107" height="28">GitHub Sponsors</amp-img></a>
+<a href="https://liberapay.com/cicirello"><amp-img src="/images/Liberapay.svg" alt="Liberapay" width="119" height="28">Sponsor on Liberapay</amp-img></a>
+<a href="https://ko-fi.com/cicirello"><amp-img src="/images/ko-fi.svg" alt="Ko-Fi" width="82" height="28">Sponsor on Ko-Fi</amp-img></a>
+</div>
+</header>
+<article itemprop="mainEntity" itemscope itemtype="http://schema.org/SoftwareSourceCode">
+<h2 itemprop="name">pyaction</h2>
+<section itemprop="description">
+<h3>Overview</h3>
+The pyaction container is a <a href="https://hub.docker.com/_/python">Python slim image</a> that 
+includes all of the following pre-installed: git, the <a href="https://cli.github.com/">GitHub CLI</a>, 
+gpg and curl. The motivating use-case is developing GitHub Actions in the Python language, which is 
+the origin of why this container includes Python, git, and the GitHub CLI. Installing the GitHub 
+CLI requires gpg and curl, which is why these are also in the container. Since they may also be 
+useful in implementing some actions, our container build process does not uninstall them. The pyaction
+container can be pulled from <a href="https://hub.docker.com/r/cicirello/pyaction">Docker Hub</a> as 
+well as the <a href="https://github.com/cicirello/pyaction/pkgs/container/pyaction">GitHub Container 
+Registry</a>. When using pyaction in the development of a GitHub Container Action, we recommend
+pulling from the GitHub Container Registry, as it is likely faster for that use-case. It is certainly
+not limited to GitHub Action development, and can be used for any other use-case where having the
+GitHub CLI running in a Docker container is desirable.
+</section>
+<section>
+<h3>Blog Posts About pyaction</h3>
+<p>As the author of the pyaction Docker Container, I occasionally post about this, and other software that I maintain
+on <a href="https://dev.to/">DEV.to</a>. See <a href="https://dev.to/cicirello">my DEV.to profile</a> for a full
+list of such posts. Below is a selection of blog posts specifically about pyaction.</p>
+<ul>
+<li><p><a href="https://dev.to/cicirello/pyaction-over-1-million-pulls-from-the-github-container-registry-29ag">pyaction: Over 1 million pulls from the GitHub Container Registry</a>, posted on DEV on February 16, 2023.</p>
+<p>A post celebrating a milestone of 1 million downloads of pyaction from the GitHub Container Registry.</p>
+</li>
+<li><p><a href="https://dev.to/cicirello/pyaction-a-docker-container-with-python-git-and-the-github-cli-930">pyaction: A Docker container with Python, git, and the GitHub CLI</a>, posted on DEV on December 28, 2022.</p>
+<p>This post provides an overview of the pyaction Docker container, designed to simplify implementing GitHub Actions with Python, but also more generally applicable wherever you need Python and the GitHub CLI within a Docker container.</p>
+</li>
+</ul>
+</section>
+</article>
+<footer>
+<div id="copyright"><small>Copyright &copy; 2021-<span itemprop="copyrightYear">2023</span> <a href="https://www.cicirello.org/">Vincent A. Cicirello</a>.</small></div>
+</footer>
+</body>
+</html>
