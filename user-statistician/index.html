@@ -213,9 +213,10 @@ Action include the following:</p>
 <li>Ability to generate separate SVGs for the individual 
 categories of stats if you prefer.</li>
 <li>Highly customizable (color themes, custom colors, section ordering, custom title).</li>
-<li>International with option to generate the SVG in over 15 languages, including: Bahasa Indonesia,
-Bengali, English, French, German, Hindi, Italian, Japanese, Korean, Lithuanian, Polish, Portuguese,
-Russian, Spanish, Turkish, and Ukrainian.</li>
+<li>International with option to generate the SVG in over 24 languages, including: Bahasa Indonesia,
+Bengali, Dutch, English, French, German, Hindi, Hungarian, Italian, Japanese, Korean, Lithuanian,
+Norwegian, Odia, Polish, Portuguese, Romanian, Russian, Santali, Serbian, Spanish, Thai, Turkish, 
+and Ukrainian.</li>
 <li>Runs entirely on GitHub.</li>
 <li>Updates the SVG on a schedule of your choice (e.g., daily), 
 rather than on-demand when someone views your profile, which has 
@@ -258,6 +259,29 @@ color palette of my personal website.</p>
 </tr>
 </table>
 </amp-carousel>
+</section>
+<section>
+<h3>Tech Stack</h3>
+<p>The user-statistician GitHub Action utilizes the following:</p>
+<ul>
+<li><a href="https://www.python.org/">Python 3</a> (implemented almost entirely in Python);</li>
+<li>The <a href="https://actions.cicirello.org/pyaction/">pyaction</a> Docker container,
+which is a Docker container designed to support GitHub Actions development in the Python
+language (also see <a href="https://github.com/cicirello/pyaction">pyaction's GitHub 
+repository</a>);</li>
+<li>The 
+<a href="https://github.com/cicirello/python-github-action-template">cicirello/python-github-action-template</a> 
+repository, a template that we maintain to assist developers getting started developing a 
+GitHub Action in Python;</li>
+<li><a href="https://cli.github.com/">GitHub CLI</a>;</li>
+<li><a href="https://docs.github.com/en/graphql">GitHub GraphQL API</a>;</li>
+<li><a href="https://github.com/primer/octicons">GitHub Octicons</a> for the icons in the stats 
+image;</li>
+<li><a href="https://www.json.org/">JSON</a> for managing the various language translations; and</li>
+<li><a href="https://www.docker.com/">Docker</a> since it is implemented as a 
+<a href="https://docs.github.com/en/actions/creating-actions/creating-a-docker-container-action">container 
+action</a>.</li>
+</ul>
 </section>
 <section>
 <h3>Blog Posts About the user-statistician</h3>
