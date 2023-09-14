@@ -166,12 +166,14 @@ nav div a:not(.active) { display: block; }
 </header>
 <article itemprop="mainEntity" itemscope itemtype="http://schema.org/SoftwareSourceCode">
 <h2 itemprop="name">gnu-on-alpine</h2>
-
 <section itemprop="description">
 <h3>Overview</h3>
 <p>The gnu-on-alpine Docker container consists of <a href="https://www.alpinelinux.org/">Alpine Linux</a>,
 along with various <a href="https://www.gnu.org/">GNU tools</a> commonly used for shell scripting.
-The base Docker image is the <a href="https://hub.docker.com/_/alpine">official Alpine Docker 
+This container is very closely related to <a href="/alpine-plus-plus/">alpine-plus-plus</a>. The 
+difference is that alpine-plus-plus includes git, while gnu-on-alpine does not. Thus, if you need 
+git, choose alpine-plus-plus; and otherwise choose gnu-on-alpine. The base Docker image is the 
+<a href="https://hub.docker.com/_/alpine">official Alpine Docker 
 image</a>, which was chosen for its small size. On top of Alpine is a single layer that includes
 the following GNU tools:</p>
 <ul>
