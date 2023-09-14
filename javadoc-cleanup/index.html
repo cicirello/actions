@@ -224,6 +224,29 @@ share it with others.</p>
 </amp-carousel>
 </section>
 <section>
+<h3>Tech Stack</h3>
+<p>The javadoc-cleanup GitHub Action utilizes the following:</p>
+<ul>
+<li><a href="https://www.python.org/">Python 3</a> (implemented almost entirely in Python);</li>
+<li>The <a href="https://actions.cicirello.org/pyaction/">pyaction</a> Docker container,
+which is a Docker container designed to support GitHub Actions development in the Python
+language (also see <a href="https://github.com/cicirello/pyaction">pyaction's GitHub 
+repository</a>);</li>
+<li>The 
+<a href="https://github.com/cicirello/python-github-action-template">cicirello/python-github-action-template</a> 
+repository, a template that we maintain to assist developers getting started developing a 
+GitHub Action in Python;</li>
+<li><a href="https://www.docker.com/">Docker</a> since it is implemented as a 
+<a href="https://docs.github.com/en/actions/creating-actions/creating-a-docker-container-action">container 
+action</a>; and</li>
+<li><a href="https://github.blog/2020-09-01-introducing-github-container-registry/">GitHub 
+Container Registry</a>, which is where we pull 
+<a href="https://github.com/cicirello/pyaction/pkgs/container/pyaction">pyaction</a> from at 
+runtime for faster action loading (e.g., pulling the base Docker container from GitHub while 
+an action is running on a GitHub server should be faster than pulling from Docker Hub).</li>
+</ul>
+</section>
+<section>
 <h3>Blog Posts About javadoc-cleanup</h3>
 <p>As the author of javadoc-cleanup, I occasionally post about this, and other software that I maintain
 on <a href="https://dev.to/">DEV.to</a>. See <a href="https://dev.to/cicirello">my DEV.to profile</a> for a full
