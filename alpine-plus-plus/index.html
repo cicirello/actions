@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html amp lang=en itemscope itemtype="http://schema.org/WebPage" itemref="logo">
+<head>
+<meta charset=utf-8>
+<link rel="canonical" href="https://actions.cicirello.org/alpine-plus-plus/">
+<link itemprop="url" href="https://actions.cicirello.org/alpine-plus-plus/">
+<meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1">
+<meta name="title" content="alpine-plus-plus - A lightweight docker image for shell scripting with git and GNU tools">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta itemprop="name" content="alpine-plus-plus - A lightweight docker image for shell scripting with git and GNU tools">
+<meta name="description" content="The alpine-plus-plus Docker container is a lightweight Docker container for shell scripting with git and GNU tools (bash, coreutils, findutils, gawk). It is built atop an Alpine Linux base to keep image size small.">
+<meta itemprop="description" content="The alpine-plus-plus Docker container is a lightweight Docker container for shell scripting with git and GNU tools (bash, coreutils, findutils, gawk). It is built atop an Alpine Linux base to keep image size small.">
+<title>alpine-plus-plus - A lightweight docker image for shell scripting with git and GNU tools</title>
+<link rel="icon" href="/images/favicon.svg" sizes="any" type="image/svg+xml">
+<meta property="og:url" content="https://actions.cicirello.org/alpine-plus-plus/">
+<meta property="og:title" content="alpine-plus-plus - A lightweight docker image for shell scripting with git and GNU tools">
+<meta property="og:image" content="https://actions.cicirello.org/images/alpine-plus-plus.png">
+<meta property="og:image:width" content="1280">
+<meta property="og:image:height" content="640">
+<meta property="og:type" content="website">
+<meta property="og:description" content="The alpine-plus-plus Docker container is a lightweight Docker container for shell scripting with git and GNU tools (bash, coreutils, findutils, gawk). It is built atop an Alpine Linux base to keep image size small.">
+<style amp-custom>
+header, nav, footer, article, aside, section { display: block; }
+footer { clear: both; }
+body { background-color: #f6f0bb; font-family: Arial, Helvetica, sans-serif; }
+#siteheader, aside, footer { background-color: #bfd9bf; }
+#siteheader, aside, footer, article { border: 2px solid #4CAF50; border-radius: 25px; margin: 10px; padding: 10px; }
+h1, h2, h3, h4, h5, h6, strong { color: #862d2d; }
+h2, h3, div.sponsor-badges { text-align:center; }
+div.sponsor-badges amp-img { margin-top: 8px; }
+a { color: #005500; }
+a:visited { color:#862d2d; }
+#toggle { position: absolute; left: -100vw; display: none; }
+nav { margin: 0px; padding: 0; overflow: hidden; display: inline-block; }
+nav div, #menu-icon { float: left; margin-right: 8px; }
+nav div a, #menu-icon { display: block; background-color: #f6f0bb; border: 2px solid #4CAF50; text-decoration: none; text-align: center; color: #1c2833; }
+nav div a { border-bottom: none; border-radius: 12px 12px 0px 0px; padding: 6px 12px; }
+nav div a:visited { color: #1c2833; }
+nav div a:hover:not(.active), #menu-icon:hover:not(.active) { background-color: #305030; color: white; }
+nav div a.active { background-color: #4CAF50; }
+nav div a:not(.active) { display: none; }
+#toggle:checked ~ div a:not(.active) { display: block; }
+#menu-icon { cursor: pointer; display: block; padding: 3px 7px 3px 7px; border-radius: 4px; }
+article li { margin-bottom: 8px; margin-top: 8px; }
+.publist li { margin-bottom: 16px; }
+.publist ul { margin-bottom: 32px; }
+section li { margin-bottom: 16px; }
+section ul { margin-bottom: 32px; }
+#copyright { text-align: center; color: #862d2d; }
+#logo, #backup-logo, h1 {max-width: 1280px;}
+h1 {margin: 10px auto; padding: 10px;}
+amp-img.contain img { object-fit: contain; }
+.badge-height { position: relative; width: 100%; height: 20px;}
+th { text-align: left; }
+table, th, td { border: 1px solid black; }
+th, td { padding: 15px; }
+@media screen and (min-width:601px){
+#menu-icon { display: none; }
+nav div a:not(.active) { display: block; }
+}
+</style>
+<style amp-boilerplate>
+  body {
+	-webkit-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+	-moz-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+	-ms-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+	animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+  }
+  @-webkit-keyframes -amp-start {
+	from {
+	  visibility: hidden;
+	}
+	to {
+	  visibility: visible;
+	}
+  }
+  @-moz-keyframes -amp-start {
+	from {
+	  visibility: hidden;
+	}
+	to {
+	  visibility: visible;
+	}
+  }
+  @-ms-keyframes -amp-start {
+	from {
+	  visibility: hidden;
+	}
+	to {
+	  visibility: visible;
+	}
+  }
+  @-o-keyframes -amp-start {
+	from {
+	  visibility: hidden;
+	}
+	to {
+	  visibility: visible;
+	}
+  }
+  @keyframes -amp-start {
+	from {
+	  visibility: hidden;
+	}
+	to {
+	  visibility: visible;
+	}
+  }
+</style>
+<noscript><style amp-boilerplate>
+	body {
+	  -webkit-animation: none;
+	  -moz-animation: none;
+	  -ms-animation: none;
+	  animation: none;
+	}
+  </style></noscript>
+<script async src="https://cdn.ampproject.org/v0.js"></script>
+</head>
+<body>
+<header itemprop="hasPart" itemscope itemtype="https://schema.org/WPHeader" id="siteheader">
+<div itemscope>
+<h1>
+<a href=".">
+<amp-img id="logo" itemprop="primaryImageOfPage" itemscope itemtype="http://schema.org/ImageObject" 
+  src="/images/alpine-plus-plus.webp" 
+  alt="alpine-plus-plus - A lightweight docker image for shell scripting with git and GNU tools" 
+  width="1280" 
+  height="640" 
+  layout="responsive"
+  srcset="/images/alpine-plus-plus.webp 1280w,
+          /images/alpine-plus-plus960.webp 960w,
+          /images/alpine-plus-plus640.webp 640w,
+		  /images/alpine-plus-plus320.webp 320w">
+  <amp-img id="backup-logo"  
+    fallback
+    src="/images/alpine-plus-plus.png" 
+    alt="alpine-plus-plus - A lightweight docker image for shell scripting with git and GNU tools" 
+    width="1280" 
+    height="640" 
+    layout="responsive"
+    srcset="/images/alpine-plus-plus.png 1280w,
+	        /images/alpine-plus-plus960.png 960w,
+            /images/alpine-plus-plus640.png 640w,
+		    /images/alpine-plus-plus320.png 320w">
+  </amp-img>
+</amp-img>
+</a>
+</h1>
+<nav>
+<input type="checkbox" id="toggle">
+<label for="toggle" id="menu-icon">&#9776;</label>
+<div><a href="/">Home</a></div>
+<div><a href="/alpine-plus-plus/" class="active">alpine-plus-plus</a></div>
+<div><a href="https://github.com/cicirello/alpine-plus-plus/pkgs/container/alpine-plus-plus">GHCR</a></div>
+<div><a href="https://hub.docker.com/r/cicirello/alpine-plus-plus">Docker</a></div>
+<div><a href="https://github.com/cicirello/alpine-plus-plus">Source code</a></div>
+<div><a href="https://github.com/cicirello/alpine-plus-plus/issues">Issue Tracker</a></div>
+</nav>
+</div>
+<div class="sponsor-badges">
+<a href="https://github.com/sponsors/cicirello"><amp-img src="/images/github-sponsors.svg" alt="GitHub Sponsors" width="107" height="28">GitHub Sponsors</amp-img></a>
+<a href="https://liberapay.com/cicirello"><amp-img src="/images/Liberapay.svg" alt="Liberapay" width="119" height="28">Sponsor on Liberapay</amp-img></a>
+<a href="https://ko-fi.com/cicirello"><amp-img src="/images/ko-fi.svg" alt="Ko-Fi" width="82" height="28">Sponsor on Ko-Fi</amp-img></a>
+</div>
+</header>
+<article itemprop="mainEntity" itemscope itemtype="http://schema.org/SoftwareSourceCode">
+<h2 itemprop="name">alpine-plus-plus</h2>
+<section itemprop="description">
+<h3>Overview</h3>
+<p>The alpine-plus-plus Docker container consists of <a href="https://www.alpinelinux.org/">Alpine Linux</a>,
+along with <a href="https://git-scm.com/">git</a> as well as various 
+<a href="https://www.gnu.org/">GNU tools</a> commonly used for shell scripting. This container is
+very closely related to <a href="/gnu-on-alpine/">gnu-on-alpine</a>. The difference is that
+alpine-plus-plus includes git, in addition to everything else from the gnu-on-alpine container.
+Thus, if you need git, choose alpine-plus-plus; and otherwise choose gnu-on-alpine.
+The base Docker image is the <a href="https://hub.docker.com/_/alpine">official Alpine Docker 
+image</a>, which was chosen for its small size. On top of Alpine is a single layer that includes
+<a href="https://git-scm.com/">git</a> as well as the following GNU tools:</p>
+<ul>
+<li><a href="https://www.gnu.org/software/bash/">bash</a></li>
+<li><a href="https://www.gnu.org/software/coreutils/">coreutils</a></li>
+<li><a href="https://www.gnu.org/software/findutils/">findutils</a></li>
+<li><a href="https://www.gnu.org/software/gawk/">gawk</a></li>
+</ul>
+<p>The original motivating use-case is for developing GitHub container actions. 
+<a href="https://github.com/features/actions">GitHub Actions</a> is GitHub's CI/CD
+platform. GitHub Actions workflows are comprised of individual steps that can
+invoke Actions that perform a variety of functions. One of the ways to implement
+an Action is what GitHub calls a 
+<a href="https://docs.github.com/en/actions/creating-actions/creating-a-docker-container-action">container 
+action</a>. This allows for implementing a GitHub Action using any programming languages or
+tools. In some cases, shell scripting may be sufficient. Thus, this container. It is certainly
+not limited to usage in GitHub Action development, and can be used for shell scripting
+tasks that also require the use of git that you need to execute locally, etc.</p>
+<p>The alpine-plus-plus container can be pulled from 
+<a href="https://hub.docker.com/r/cicirello/alpine-plus-plus">Docker Hub</a> as well as the 
+<a href="https://github.com/cicirello/alpine-plus-plus/pkgs/container/alpine-plus-plus">GitHub Container 
+Registry</a>. When using alpine-plus-plus in the development of a GitHub Container Action, we recommend
+pulling from the GitHub Container Registry, as it is likely faster for that use-case.</p>
+<p><i>The developers of alpine-plus-plus are not affiliated with any of Alpine Linux, Docker, 
+GNU, or GitHub.</i> We simply use GitHub Actions, and developed this container to help others.</p>
+</section>
+<section>
+<h3>Blog Posts About alpine-plus-plus</h3>
+<p>As the author of the alpine-plus-plus Docker Container, I occasionally post about this, 
+and other software that I maintain on <a href="https://dev.to/">DEV.to</a>. See <a href="https://dev.to/cicirello">my DEV.to profile</a> for a full list of such posts. Below is 
+a selection of blog posts specifically about alpine-plus-plus.</p>
+<ul>
+<li><p><a href="https://dev.to/cicirello/gnu-on-alpine-and-alpine-plus-plus-two-lightweight-containers-for-implementing-github-container-actions-with-shell-scripting-360i">gnu-on-alpine and alpine-plus-plus: Two Lightweight Containers for Implementing GitHub Container Actions with Shell Scripting</a>, posted on DEV on February 21, 2023.</p>
+<p>This post covers the motivation, purpose, and functionality of gnu-on-alpine and alpine-plus-plus, which are two Docker containers built atop Alpine Linux, and include a variety of shell scripting tools.</p>
+</li>
+</ul>
+</section>
+</article>
+<footer>
+<div id="copyright"><small>Copyright &copy; 2020-<span itemprop="copyrightYear">2023</span> <a href="https://www.cicirello.org/">Vincent A. Cicirello</a>.</small></div>
+</footer>
+</body>
+</html>

@@ -152,12 +152,14 @@ nav div a:not(.active) { display: block; }
 <input type="checkbox" id="toggle">
 <label for="toggle" id="menu-icon">&#9776;</label>
 <div><a href="/" class="active">Home</a></div>
-<div><a href="jacoco-badge-generator">jacoco-badge-generator</a></div>
-<div><a href="user-statistician">user-statistician</a></div>
-<div><a href="generate-sitemap">generate-sitemap</a></div>
-<div><a href="javadoc-cleanup">javadoc-cleanup</a></div>
-<div><a href="count-action-users">count-action-users</a></div>
-<div><a href="pyaction">pyaction</a></div>
+<div><a href="jacoco-badge-generator/">jacoco-badge-generator</a></div>
+<div><a href="user-statistician/">user-statistician</a></div>
+<div><a href="generate-sitemap/">generate-sitemap</a></div>
+<div><a href="javadoc-cleanup/">javadoc-cleanup</a></div>
+<div><a href="count-action-users/">count-action-users</a></div>
+<div><a href="pyaction/">pyaction</a></div>
+<div><a href="gnu-on-alpine/">gnu-on-alpine</a></div>
+<div><a href="alpine-plus-plus/">alpine-plus-plus</a></div>
 </nav>
 </div>
 <div class="centered">
@@ -221,6 +223,15 @@ that you find them useful. They include the following
 <li><a href="pyaction/">pyaction</a>: The pyaction Docker container is designed 
 to support implementing Github Actions with Python. It is a python slim Docker 
 image, that includes curl, gpg, git, and the GitHub CLI pre-installed.</li>
+<li><a href="gnu-on-alpine/">gnu-on-alpine</a>: The gnu-on-alpine Docker container
+is a lightweight container to support shell scripting. It is built atop a base
+of Alpine Linux to keep the image size small, and then has a single layer with
+several GNU tools including bash, coreutils, findutils, and gawk.</li>
+<li><a href="alpine-plus-plus/">alpine-plus-plus</a>: The alpine-plus-plus Docker 
+container is a lightweight container to support shell scripting with git. It is 
+built atop a base of Alpine Linux to keep the image size small, and then has a 
+single layer with git, as well as several GNU tools including bash, coreutils, 
+findutils, and gawk.</li>
 </ul>
 </section>
 <section>
@@ -231,6 +242,7 @@ profile</a> for a full list of such posts. Below is a selection of blog posts ab
 <ul>
 <li><a href="https://dev.to/cicirello/celebrating-over-2-million-pulls-of-pyaction-from-the-github-container-registry-20hb">Celebrating over 2 million pulls of pyaction from the GitHub Container Registry</a>, posted on DEV on September 2, 2023.</li>
 <li><a href="https://dev.to/cicirello/jacoco-coverage-badges-for-multi-module-projects-in-github-actions-ace">JaCoCo Coverage Badges for Multi-Module Projects in GitHub Actions</a>, posted on DEV on May 25, 2023.</li>
+<li><a href="https://dev.to/cicirello/gnu-on-alpine-and-alpine-plus-plus-two-lightweight-containers-for-implementing-github-container-actions-with-shell-scripting-360i">gnu-on-alpine and alpine-plus-plus: Two Lightweight Containers for Implementing GitHub Container Actions with Shell Scripting</a>, posted on DEV on February 21, 2023.</li>
 <li><a href="https://dev.to/cicirello/pyaction-over-1-million-pulls-from-the-github-container-registry-29ag">pyaction: Over 1 million pulls from the GitHub Container Registry</a>, posted on DEV on February 16, 2023.</li>
 <li><a href="https://dev.to/cicirello/pyaction-a-docker-container-with-python-git-and-the-github-cli-930">pyaction: A Docker container with Python, git, and the GitHub CLI</a>, posted on DEV on December 28, 2022.</li>
 <li><a href="https://dev.to/cicirello/deploy-a-documentation-website-for-a-java-library-using-github-actions-197n">Deploy a Documentation Website for a Java Library Using GitHub Actions</a>, posted on DEV on November 30, 2022.</li>

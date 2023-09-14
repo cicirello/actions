@@ -116,7 +116,6 @@ nav div a:not(.active) { display: block; }
 	}
   </style></noscript>
 <script async src="https://cdn.ampproject.org/v0.js"></script>
-<script async custom-element="amp-carousel" src="https://cdn.ampproject.org/v0/amp-carousel-0.1.js"></script>
 </head>
 <body>
 <header itemprop="hasPart" itemscope itemtype="https://schema.org/WPHeader" id="siteheader">
@@ -152,7 +151,7 @@ nav div a:not(.active) { display: block; }
 <input type="checkbox" id="toggle">
 <label for="toggle" id="menu-icon">&#9776;</label>
 <div><a href="/">Home</a></div>
-<div><a href="/pyaction" class="active">pyaction</a></div>
+<div><a href="/pyaction/" class="active">pyaction</a></div>
 <div><a href="https://github.com/cicirello/pyaction/pkgs/container/pyaction">GHCR</a></div>
 <div><a href="https://hub.docker.com/r/cicirello/pyaction">Docker</a></div>
 <div><a href="https://github.com/cicirello/pyaction">Source code</a></div>
@@ -170,7 +169,7 @@ nav div a:not(.active) { display: block; }
 <h2 itemprop="name">pyaction</h2>
 <section itemprop="description">
 <h3>Overview</h3>
-The pyaction container is a <a href="https://hub.docker.com/_/python">Python slim image</a> that 
+<p>The pyaction container is a <a href="https://hub.docker.com/_/python">Python slim image</a> that 
 includes all of the following pre-installed: git, the <a href="https://cli.github.com/">GitHub CLI</a>, 
 gpg and curl. The motivating use-case is developing GitHub Actions in the Python language, which is 
 the origin of why this container includes Python, git, and the GitHub CLI. Installing the GitHub 
@@ -181,7 +180,7 @@ well as the <a href="https://github.com/cicirello/pyaction/pkgs/container/pyacti
 Registry</a>. When using pyaction in the development of a GitHub Container Action, we recommend
 pulling from the GitHub Container Registry, as it is likely faster for that use-case. It is certainly
 not limited to GitHub Action development, and can be used for any other use-case where having the
-GitHub CLI running in a Docker container is desirable.
+GitHub CLI running in a Docker container is desirable.</p>
 </section>
 <section>
 <h3>GitHub Actions Built With pyaction</h3>
