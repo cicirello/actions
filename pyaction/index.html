@@ -206,11 +206,62 @@ monitors and reports the number of users of one or more GitHub Actions.</li>
 </ul>
 </section>
 <section>
+<h3>Docker Tags</h3>
+<p>For the current version of Python (e.g., 3.13.5) and current version of GitHub CLI (e.g., 2.76.2), 
+all of the following tags are available and equivalent: <code>latest</code>, <code>3.13.5</code>, 
+<code>3.13</code>, <code>3.13.5-gh-2.76.2</code>, <code>3.13.5-gh-2.76</code>, <code>3.13.5-gh-2</code>, 
+<code>3.13-gh-2.76.2</code>, <code>3.13-gh-2.76</code>, <code>3.13-gh-2</code>.</p>
+<p>For prior versions of Python (3.8, 3.9, 3.10, 3.11, 3.12) and current version of GitHub CLI (2.76.2), 
+all of the following tags are available and equivalent: <code>3.12</code>, <code>3.12-gh-2.76.2</code>, 
+<code>3.12-gh-2.76</code>, <code>3.12-gh-2</code>.</p>
+<p>This tag scheme began with version 2.75.0 of the GitHub CLI. We don't support pyaction images with 
+earlier versions of the GitHub CLI.</p>
+<p>This tag scheme began with Python 3.13.5. Python patch level tags are not available for pyaction prior 
+to Python 3.13.5.</p>
+</section>
+<section>
+<h3>Usage</h3>
+<p>The pre-built image is hosted on both Docker Hub and the Github Container Registry. You can use 
+it in the following ways.</p>
+<div class="badge-height"><a href="https://hub.docker.com/r/cicirello/pyaction"><amp-img class="contain" layout="fill" alt="Latest release on Docker Hub" src="https://img.shields.io/docker/v/cicirello/pyaction?label=Docker%20Hub&logo=docker"></amp-img></a></div>
+<p><strong>Docker Pull:</strong> Pull the latest image from Docker Hub with the following (replace 
+<code>latest</code> with a specific version number if you prefer):</p>
+<pre><code>docker pull cicirello/pyaction:latest
+</code></pre>
+<p><strong>Base Image in a Dockerfile:</strong> Use as a base image in a Dockerfile (replace <code>latest</code> 
+with a specific version number if you prefer):</p>
+<pre><code>FROM cicirello/pyaction:latest
+# The rest of your Dockerfile would go here.
+</code></pre>
+<div class="badge-height"><a href="https://github.com/users/cicirello/packages/container/package/pyaction"><amp-img class="contain" layout="fill" alt="Latest release in the GitHub Container Registry" src="https://img.shields.io/docker/v/cicirello/pyaction?label=ghcr.io&logo=github"></amp-img></a></div>
+<p><strong>Docker Pull:</strong> Pull from the Github Container Registry with:</p>
+<pre><code>docker pull ghcr.io/cicirello/pyaction:latest
+</code></pre>
+<p><strong>Base Image in a Dockerfile:</strong> Use as a base image in a Dockerfile (via the Github Container 
+Registry) with:</p>
+<pre><code>FROM ghcr.io/cicirello/pyaction:latest
+# The rest of your Dockerfile would go here.
+</code></pre>
+</section>
+<section>
+<h3>License</h3>
+<p><strong>Source Code License:</strong> The source code, including the Dockerfile and anything 
+else within the <a href="https://github.com/cicirello/pyaction">Github repository for 
+pyaction</a>, is licensed under the 
+<a href="https://github.com/cicirello/pyaction/blob/master/LICENSE">MIT License</a>.</p>
+<p><strong>Image Licenses:</strong> As with all pre-built Docker images, the image itself (once built, 
+or obtained from Docker Hub or the Github Container Registry) contains software that is covered by a 
+variety of licenses. See the license information for the <a href="https://hub.docker.com/_/python">python docker image</a>, the <a href="https://git-scm.com/">license for git</a>, the <a href="https://github.com/cli/cli/blob/trunk/LICENSE">license for GitHub CLI</a>, and the <a href="https://docs.python.org/3/license.html">license for Python</a>.</p>
+</section>
+<section>
 <h3>Blog Posts About pyaction</h3>
 <p>As the author of the pyaction Docker Container, I occasionally post about this, and other software that I maintain
 on <a href="https://dev.to/">DEV.to</a>. See <a href="https://dev.to/cicirello">my DEV.to profile</a> for a full
 list of such posts. Below is a selection of blog posts specifically about pyaction.</p>
 <ul>
+<li><p><a href="https://dev.to/cicirello/pyaction-pulled-4-million-times-and-counting-from-the-github-container-registry-47i3">pyaction pulled 4 million times and counting from the GitHub Container Registry</a>, posted on DEV on May 31, 2024.</p>
+<p>A post celebrating a milestone of 4 million downloads of pyaction from the GitHub Container Registry.</p>
+</li>
 <li><p><a href="https://dev.to/cicirello/celebrating-over-2-million-pulls-of-pyaction-from-the-github-container-registry-20hb">Celebrating over 2 million pulls of pyaction from the GitHub Container Registry</a>, posted on DEV on September 2, 2023.</p>
 <p>A post celebrating a milestone of 2 million downloads of pyaction from the GitHub Container Registry.</p>
 </li>
