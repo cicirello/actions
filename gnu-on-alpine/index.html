@@ -202,6 +202,73 @@ pulling from the GitHub Container Registry, as it is likely faster for that use-
 GNU, or GitHub.</i> We simply use GitHub Actions, and developed this container to help others.</p>
 </section>
 <section>
+<h3>Docker Tags</h3>
+<p>The Docker tags of the container mirror the Docker tags of the underlying version of Alpine, which
+follows <a href="https://semver.org/">Semantic Versioning</a> (SemVer). SemVer uses version numbers of 
+the form: MAJOR.MINOR.PATCH, where differences in MAJOR correspond to incompatible changes, differences 
+in MINOR correspond to the introduction of backwards compatible new functionality, and PATCH corresponds 
+to backwards compatible bug fixes. Each image pushed to Docker Hub and the Github Container Registry is 
+tagged as follows:</p>
+<ul>
+<li>The tag <code>latest</code> indicates, well, the latest image.</li>
+<li>Tags of the form MAJOR.MINOR.PATCH (such as <code>3.22.1</code>) indicate the SemVer of the Alpine 
+image used as the base.</li>
+<li>Tags of the form MAJOR.MINOR (e.g., <code>3.22</code>) correspond to the most recent patch level 
+of the Alpine image used as the base. For example, if <code>3.22.1</code> is the latest release, 
+then <code>3.22</code> maps to this as well.</li>
+<li>Tags of the form MAJOR (e.g., <code>3</code>) correspond to the most recent patch level of the 
+Alpine image used as the base, with major corresponding to major version. For example, if <code>3.22.1</code> 
+is the latest release, then <code>3</code> maps to this as well.</li>
+</ul>
+</section>
+<section>
+<h3>Usage</h3>
+<p>The pre-built image is hosted on both Docker Hub and the Github Container Registry. You can use 
+it in the following ways.</p>
+<div class="badge-height"><a href="https://hub.docker.com/r/cicirello/gnu-on-alpine"><amp-img class="contain" layout="fill" alt="Latest release on Docker Hub" src="https://img.shields.io/docker/v/cicirello/gnu-on-alpine?label=Docker%20Hub&logo=docker"></amp-img></a></div>
+<p><strong>Docker Pull:</strong> Pull the latest image from Docker Hub with the following (replace 
+<code>latest</code> with a specific version number if you prefer):</p>
+<pre><code>docker pull cicirello/gnu-on-alpine:latest
+</code></pre>
+<p><strong>Base Image in a Dockerfile:</strong> Use as a base image in a Dockerfile (replace <code>latest</code> 
+with a specific version number if you prefer):</p>
+<pre><code>FROM cicirello/gnu-on-alpine:latest
+# The rest of your Dockerfile would go here.
+</code></pre>
+<div class="badge-height"><a href="https://github.com/users/cicirello/packages/container/package/gnu-on-alpine"><amp-img class="contain" layout="fill" alt="Latest release in the GitHub Container Registry" src="https://img.shields.io/docker/v/cicirello/gnu-on-alpine?label=ghcr.io&logo=github"></amp-img></a></div>
+<p><strong>Docker Pull:</strong> Pull from the Github Container Registry with:</p>
+<pre><code>docker pull ghcr.io/cicirello/gnu-on-alpine:latest
+</code></pre>
+<p><strong>Base Image in a Dockerfile:</strong> Use as a base image in a Dockerfile (via the Github Container 
+Registry) with:</p>
+<pre><code>FROM ghcr.io/cicirello/gnu-on-alpine:latest
+# The rest of your Dockerfile would go here.
+</code></pre>
+</section>
+<section>
+<h3>License</h3>
+<p><strong>Source Code License:</strong> The source code, including the Dockerfile and anything 
+else within the <a href="https://github.com/cicirello/gnu-on-alpine">Github repository for 
+gnu-on-alpine</a>, is licensed under the 
+<a href="https://github.com/cicirello/gnu-on-alpine/blob/master/LICENSE">MIT License</a>.</p>
+<p><strong>Image Licenses:</strong> As with all pre-built Docker images, the image itself (once 
+built, or obtained from Docker Hub or the Github Container Registry) contains software that is 
+covered by a variety of licenses. Since the base image is Alpine, this would include the 
+<a href="https://pkgs.alpinelinux.org/">licenses of the components of Alpine</a>; and also includes 
+the <a href="https://www.gnu.org/licenses/gpl-3.0.en.html">licenses of the GNU tools</a> added to the 
+image.</p>
+<p><strong>Impact on Licenses of Derivatives:</strong> If you build and distribute an image containing 
+your software, using gnu-on-alpine as the base image, it is your responsibility to follow the 
+licenses of all of the software contained within the image. At the time of this writing, one of the 
+effects of the combination of those licenses is a constraint on the licensing of such a pre-built 
+image containing your software to the <a href="https://www.gnu.org/licenses/gpl-3.0.en.html">GPL 3.0 
+or later</a> (derived from the inclusion of bash and the 
+other GNU tools). If you desire a more permissive license for your software, one approach would be 
+to instead distribute a Dockerfile that builds the image containing your software, rather than a 
+pre-built image of your software, which should circumvent the issue since you would no longer be 
+distributing a derivative of GPL licensed software.</p>
+</section>
+<section>
 <h3>Blog Posts About gnu-on-alpine</h3>
 <p>As the author of the gnu-on-alpine Docker Container, I occasionally post about this, 
 and other software that I maintain on <a href="https://dev.to/">DEV.to</a>. See <a href="https://dev.to/cicirello">my DEV.to profile</a> for a full list of such posts. Below is 
