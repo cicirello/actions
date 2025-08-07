@@ -200,9 +200,12 @@ jacoco-badge-generator GitHub Action is developed by
 <a itemprop="url mainEntityOfPage" href="https://www.cicirello.org/"><span itemprop="name">Vincent 
 A. Cicirello</span></a>. It was originally implemented for my own use, but I have decided to
 share it with others.</p>
+<p><em>The developers of the jacoco-badge-generator are not affiliated with the developers of JaCoCo, 
+although we are a fan and user of their excellent test coverage tool.</em></p>
 </section>
 <section>
 <h3>Live GitHub Actions Examples</h3>
+<div class="badge-height"><a href="https://github.com/marketplace/actions/jacoco-badge-generator"><amp-img class="contain" layout="fill" alt="Latest release in the GitHub Marketplace" src="https://img.shields.io/github/v/release/cicirello/jacoco-badge-generator?label=Marketplace&logo=GitHub"></amp-img></a></div>
 <p>We have a <a href="https://github.com/cicirello/examples-jacoco-badge-generator">template 
 repository</a> containing a simple Java project (Maven),
 and several runnable example workflows demonstrating the most common use-cases.
@@ -231,6 +234,37 @@ action.</p>
 </tr>
 </table>
 </amp-carousel>
+</section>
+<section>
+<h3>Command-Line Usage</h3>
+<div class="badge-height"><a href="https://pypi.org/project/jacoco-badge-generator/"><amp-img class="contain" layout="fill" alt="Latest release on PyPI" src="https://img.shields.io/pypi/v/jacoco-badge-generator?logo=pypi"></amp-img></a></div>
+<p>Although the tool began its life as a GitHub Action, it can now be used as a command-line utility
+outside of GitHub Actions, such as on your local development machine.</p>
+<p><strong>Installing from PyPI:</strong> The jacoco-badge-generator requires Python 3 (and has 
+been tested with Python 3.8 and above).</p>
+<p>To install from PyPi (Unix and MacOS):</p>
+<pre><code>python3 -m pip install jacoco-badge-generator
+</code></pre>
+<p>To install from PyPi (Windows):</p>
+<pre><code>py -m pip install jacoco-badge-generator
+</code></pre>
+<p>To upgrade to the latest version from PyPi (Unix and MacOS):</p>
+<pre><code>python3 -m pip install --upgrade jacoco-badge-generator
+</code></pre>
+<p>To upgrade to the latest version from PyPi (Windows):</p>
+<pre><code>py -m pip install --upgrade jacoco-badge-generator
+</code></pre>
+<p><strong>Running for the First Time:</strong> After installing, we recommend running it 
+once with the <code>-h</code> or <code>--help</code> flag to see the details of all of the 
+available command-line options.</p>
+<p>On Unix or MacOS:</p>
+<pre><code>python3 -m jacoco_badge_generator --help
+</code></pre>
+<p>On Windows:</p>
+<pre><code>py -m jacoco_badge_generator --help
+</code></pre>
+<p><strong>Detailed Usage Examples:</strong> See the <a href="https://github.com/cicirello/jacoco-badge-generator?tab=readme-ov-file#cli-examples">detailed usage 
+examples</a> in the GitHub repository.</p>
 </section>
 <section>
 <h3>Tech Stack</h3>
