@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html amp lang=en itemscope itemtype="http://schema.org/WebPage" itemref="logo">
+<html lang=en itemscope itemtype="http://schema.org/WebPage" itemref="logo">
 <head>
 <meta charset=utf-8>
 <link rel="canonical" href="https://actions.cicirello.org/">
@@ -19,15 +19,16 @@
 <meta property="og:image:height" content="640">
 <meta property="og:type" content="website">
 <meta property="og:description" content="Features information on several open source GitHub Actions for workflow automation that we have developed to automate parts of the CI/CD pipeline, and other repetitive tasks. The GitHub Actions featured include jacoco-badge-generator, generate-sitemap, user-statistician, and javadoc-cleanup.">
-<style amp-custom>
+<style>
 header, nav, footer, article, aside, section { display: block; }
 footer { clear: both; }
 body { background-color: #f6f0bb; font-family: Arial, Helvetica, sans-serif; }
 #siteheader, aside, footer { background-color: #bfd9bf; }
 #siteheader, aside, footer, article { border: 2px solid #4CAF50; border-radius: 25px; margin: 10px; padding: 10px; }
+img.respimg { max-width: 100%; height: auto; }
 h1, h2, h3, h4, h5, h6, strong { color: #862d2d; }
-h2, h3, div.centered { text-align:center; }
-div.centered amp-img { margin-top: 8px; }
+h1, h2, h3, div.centered { text-align:center; }
+div.centered img { margin-top: 8px; }
 a { color: #005500; }
 a:visited { color:#862d2d; }
 #toggle { position: absolute; left: -100vw; display: none; }
@@ -47,9 +48,7 @@ article li { margin-bottom: 8px; margin-top: 8px; }
 section li { margin-bottom: 16px; }
 section ul { margin-bottom: 32px; }
 #copyright { text-align: center; color: #862d2d; }
-#logo, #backup-logo, h1 {max-width: 1280px;}
 h1 {margin: 10px auto; padding: 10px;}
-amp-img.contain img { object-fit: contain; }
 .badge-height { position: relative; width: 100%; height: 20px;}
 th { text-align: left; }
 table, th, td { border: 1px solid black; }
@@ -60,97 +59,40 @@ th, td { padding: 15px; }
 nav div a:not(.active) { display: block; }
 }
 </style>
-<style amp-boilerplate>
-  body {
-	-webkit-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
-	-moz-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
-	-ms-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
-	animation: -amp-start 8s steps(1, end) 0s 1 normal both;
-  }
-  @-webkit-keyframes -amp-start {
-	from {
-	  visibility: hidden;
-	}
-	to {
-	  visibility: visible;
-	}
-  }
-  @-moz-keyframes -amp-start {
-	from {
-	  visibility: hidden;
-	}
-	to {
-	  visibility: visible;
-	}
-  }
-  @-ms-keyframes -amp-start {
-	from {
-	  visibility: hidden;
-	}
-	to {
-	  visibility: visible;
-	}
-  }
-  @-o-keyframes -amp-start {
-	from {
-	  visibility: hidden;
-	}
-	to {
-	  visibility: visible;
-	}
-  }
-  @keyframes -amp-start {
-	from {
-	  visibility: hidden;
-	}
-	to {
-	  visibility: visible;
-	}
-  }
-</style>
-<noscript><style amp-boilerplate>
-	body {
-	  -webkit-animation: none;
-	  -moz-animation: none;
-	  -ms-animation: none;
-	  animation: none;
-	}
-  </style></noscript>
-<script async src="https://cdn.ampproject.org/v0.js"></script>
-<script async custom-element="amp-carousel" src="https://cdn.ampproject.org/v0/amp-carousel-0.1.js"></script>
-<script async custom-element="amp-auto-ads" src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js"></script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6813707428591829"
+     crossorigin="anonymous"></script>
 </head>
 <body>
-<amp-auto-ads type="adsense"
-        data-ad-client="ca-pub-6813707428591829">
-</amp-auto-ads>
 <header itemprop="hasPart" itemscope itemtype="https://schema.org/WPHeader" id="siteheader">
 <div itemscope>
 <h1>
 <a href=".">
-<amp-img id="logo" itemprop="primaryImageOfPage" itemscope itemtype="http://schema.org/ImageObject" 
-  src="/images/actions.webp" 
-  alt="Open Source GitHub Actions for Workflow Automation" 
-  width="1280" 
-  height="640" 
-  layout="responsive"
-  srcset="/images/actions.webp 1280w,
-          /images/actions960.webp 960w,
-          /images/actions640.webp 640w,
-		  /images/actions320.webp 320w">
-  <amp-img id="backup-logo"  
-    fallback
-    src="/images/actions.png" 
+<picture id="logo" itemprop="primaryImageOfPage" itemscope itemtype="http://schema.org/ImageObject">
+    <source  
+    type="image/webp" 
+    srcset="images/actions.webp 1280w,
+          images/actions960.webp 960w,
+          images/actions640.webp 640w,
+		  images/actions320.webp 320w"
+	sizes="(width <= 320px) 320px, 
+         (width <= 640px) 640px, 
+		 (width <= 960px) 960px, 
+		 1280px">
+  <img id="backup-logo"  
+    src="images/actions.png" 
     alt="Open Source GitHub Actions for Workflow Automation" 
     width="1280" 
     height="640" 
-    layout="responsive"
-    srcset="/images/actions.png 1280w,
-	        /images/actions960.png 960w,
-            /images/actions640.png 640w,
-		    /images/actions320.png 320w">
-  </amp-img>
-</amp-img>
+    class="respimg"
+    srcset="images/actions.png 1280w,
+	        images/actions960.png 960w,
+            images/actions640.png 640w,
+		    images/actions320.png 320w"
+	sizes="(width <= 320px) 320px, 
+         (width <= 640px) 640px, 
+		 (width <= 960px) 960px, 
+		 1280px">
+</picture>
 </a>
 </h1>
 <nav>
@@ -168,9 +110,9 @@ nav div a:not(.active) { display: block; }
 </nav>
 </div>
 <div class="centered">
-<a href="https://github.com/sponsors/cicirello"><amp-img src="/images/github-sponsors.svg" alt="GitHub Sponsors" width="107" height="28">GitHub Sponsors</amp-img></a>
-<a href="https://liberapay.com/cicirello"><amp-img src="/images/Liberapay.svg" alt="Liberapay" width="119" height="28">Sponsor on Liberapay</amp-img></a>
-<a href="https://ko-fi.com/cicirello"><amp-img src="/images/ko-fi.svg" alt="Ko-Fi" width="82" height="28">Sponsor on Ko-Fi</amp-img></a>
+<a href="https://github.com/sponsors/cicirello"><img src="images/github-sponsors.svg" alt="GitHub Sponsors" width="107" height="28"></a>
+<a href="https://liberapay.com/cicirello"><img src="images/Liberapay.svg" alt="Liberapay" width="119" height="28"></a>
+<a href="https://ko-fi.com/cicirello"><img src="images/ko-fi.svg" alt="Ko-Fi" width="82" height="28"></a>
 </div>
 </header>
 <article>
@@ -271,11 +213,11 @@ profile</a> for a full list of such posts. Below is a selection of blog posts ab
 </section>
 </article>
 <footer>
-<small><p>
+<p><small>
 <a class="footer-link" href="https://www.cicirello.org/e/">Contact</a>
 <strong>&#x25C6;</strong>
 <a class="footer-link" href="https://www.cicirello.org/policy/privacy/">Privacy Policy</a>
-</p></small>
+</small></p>
 <div id="copyright"><small>Copyright &copy; 2021-<span itemprop="copyrightYear">2025</span> <a href="https://www.cicirello.org/">Vincent A. Cicirello</a>.</small></div>
 </footer>
 </body>
