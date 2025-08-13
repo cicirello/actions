@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html amp lang=en itemscope itemtype="http://schema.org/WebPage" itemref="logo">
+<html lang=en itemscope itemtype="http://schema.org/WebPage" itemref="logo">
 <head>
 <meta charset=utf-8>
 <link rel="canonical" href="https://actions.cicirello.org/jacoco-badge-generator/">
@@ -19,15 +19,16 @@
 <meta property="og:image:height" content="640">
 <meta property="og:type" content="website">
 <meta property="og:description" content="The jacoco-badge-generator GitHub Action parses a jacoco.csv from a JaCoCo coverage report, computes C0 and C1 coverage percentages from JaCoCo's Instructions and Branches counters, and generates badges for one or both of these (configurable with action inputs) to provide an easy to read visual summary of the code coverage of your test cases. The jacoco-badge-generator can also optionally be used as part of a pull-request check, failing workflows if coverage below a threshold or if it decreased.">
-<style amp-custom>
+<style>
 header, nav, footer, article, aside, section { display: block; }
 footer { clear: both; }
 body { background-color: #f6f0bb; font-family: Arial, Helvetica, sans-serif; }
 #siteheader, aside, footer { background-color: #bfd9bf; }
 #siteheader, aside, footer, article { border: 2px solid #4CAF50; border-radius: 25px; margin: 10px; padding: 10px; }
+img.respimg { max-width: 100%; height: auto; }
 h1, h2, h3, h4, h5, h6, strong { color: #862d2d; }
-h2, h3, div.sponsor-badges { text-align:center; }
-div.sponsor-badges amp-img { margin-top: 8px; }
+h1, h2, h3, div.centered { text-align:center; }
+div.sponsors img { margin-top: 8px; }
 a { color: #005500; }
 a:visited { color:#862d2d; }
 #toggle { position: absolute; left: -100vw; display: none; }
@@ -47,110 +48,53 @@ article li { margin-bottom: 8px; margin-top: 8px; }
 section li { margin-bottom: 16px; }
 section ul { margin-bottom: 32px; }
 #copyright { text-align: center; color: #862d2d; }
-#logo, #backup-logo, h1 {max-width: 1280px;}
 h1 {margin: 10px auto; padding: 10px;}
-amp-img.contain img { object-fit: contain; }
 .badge-height { position: relative; width: 100%; height: 20px;}
 th { text-align: left; }
-table, th, td { border: 1px solid black; }
+table, th, td { border: 1px solid black; white-space: nowrap;}
+table { width: auto; min-width: 100%; }
 th, td { padding: 15px; }
+.carousel { overflow-x: auto; -webkit-overflow-scrolling: touch; }
 .footer-link { padding: 0 10px 0 10px; }
 @media screen and (min-width:601px){
 #menu-icon { display: none; }
 nav div a:not(.active) { display: block; }
 }
 </style>
-<style amp-boilerplate>
-  body {
-	-webkit-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
-	-moz-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
-	-ms-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
-	animation: -amp-start 8s steps(1, end) 0s 1 normal both;
-  }
-  @-webkit-keyframes -amp-start {
-	from {
-	  visibility: hidden;
-	}
-	to {
-	  visibility: visible;
-	}
-  }
-  @-moz-keyframes -amp-start {
-	from {
-	  visibility: hidden;
-	}
-	to {
-	  visibility: visible;
-	}
-  }
-  @-ms-keyframes -amp-start {
-	from {
-	  visibility: hidden;
-	}
-	to {
-	  visibility: visible;
-	}
-  }
-  @-o-keyframes -amp-start {
-	from {
-	  visibility: hidden;
-	}
-	to {
-	  visibility: visible;
-	}
-  }
-  @keyframes -amp-start {
-	from {
-	  visibility: hidden;
-	}
-	to {
-	  visibility: visible;
-	}
-  }
-</style>
-<noscript><style amp-boilerplate>
-	body {
-	  -webkit-animation: none;
-	  -moz-animation: none;
-	  -ms-animation: none;
-	  animation: none;
-	}
-  </style></noscript>
-<script async src="https://cdn.ampproject.org/v0.js"></script>
-<script async custom-element="amp-carousel" src="https://cdn.ampproject.org/v0/amp-carousel-0.1.js"></script>
-<script async custom-element="amp-auto-ads" src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js"></script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6813707428591829"
+     crossorigin="anonymous"></script>
 </head>
 <body>
-<amp-auto-ads type="adsense"
-        data-ad-client="ca-pub-6813707428591829">
-</amp-auto-ads>
 <header itemprop="hasPart" itemscope itemtype="https://schema.org/WPHeader" id="siteheader">
 <div itemscope>
 <h1>
 <a href=".">
-<amp-img id="logo" itemprop="primaryImageOfPage" itemscope itemtype="http://schema.org/ImageObject" 
-  src="/images/jacoco-badge-generator.webp" 
-  alt="jacoco-badge-generator - Coverage badges, and pull request coverage checks, from JaCoCo reports in GitHub Actions" 
-  width="1280" 
-  height="640" 
-  layout="responsive"
+<picture id="logo" itemprop="primaryImageOfPage" itemscope itemtype="http://schema.org/ImageObject">
+<source 
+  type="image/webp"
   srcset="/images/jacoco-badge-generator.webp 1280w,
           /images/jacoco-badge-generator960.webp 960w,
           /images/jacoco-badge-generator640.webp 640w,
-		  /images/jacoco-badge-generator320.webp 320w">
-  <amp-img id="backup-logo"  
-    fallback
+		  /images/jacoco-badge-generator320.webp 320w"
+  sizes="(width <= 320px) 320px, 
+         (width <= 640px) 640px, 
+		 (width <= 960px) 960px, 
+		 1280px">
+  <img 
     src="/images/jacoco-badge-generator.png" 
     alt="jacoco-badge-generator - Coverage badges, and pull request coverage checks, from JaCoCo reports in GitHub Actions" 
     width="1280" 
     height="640" 
-    layout="responsive"
+    class="respimg"
     srcset="/images/jacoco-badge-generator.png 1280w,
 	        /images/jacoco-badge-generator960.png 960w,
             /images/jacoco-badge-generator640.png 640w,
-		    /images/jacoco-badge-generator320.png 320w">
-  </amp-img>
-</amp-img>
+		    /images/jacoco-badge-generator320.png 320w"
+	sizes="(width <= 320px) 320px, 
+         (width <= 640px) 640px, 
+		 (width <= 960px) 960px, 
+		 1280px">
+</picture>
 </a>
 </h1>
 <nav>
@@ -165,10 +109,10 @@ nav div a:not(.active) { display: block; }
 <div><a href="https://github.com/cicirello/jacoco-badge-generator/blob/main/CHANGELOG.md">ChangeLog</a></div>
 </nav>
 </div>
-<div class="sponsor-badges">
-<a href="https://github.com/sponsors/cicirello"><amp-img src="/images/github-sponsors.svg" alt="GitHub Sponsors" width="107" height="28">GitHub Sponsors</amp-img></a>
-<a href="https://liberapay.com/cicirello"><amp-img src="/images/Liberapay.svg" alt="Liberapay" width="119" height="28">Sponsor on Liberapay</amp-img></a>
-<a href="https://ko-fi.com/cicirello"><amp-img src="/images/ko-fi.svg" alt="Ko-Fi" width="82" height="28">Sponsor on Ko-Fi</amp-img></a>
+<div class="centered sponsors">
+<a href="https://github.com/sponsors/cicirello"><img src="/images/github-sponsors.svg" alt="GitHub Sponsors" width="107" height="28"></a>
+<a href="https://liberapay.com/cicirello"><img src="/images/Liberapay.svg" alt="Liberapay" width="119" height="28"></a>
+<a href="https://ko-fi.com/cicirello"><img src="/images/ko-fi.svg" alt="Ko-Fi" width="82" height="28"></a>
 </div>
 </header>
 <article itemprop="mainEntity" itemscope itemtype="http://schema.org/SoftwareSourceCode">
@@ -209,7 +153,7 @@ although we are a fan and user of their excellent test coverage tool.</em></p>
 </section>
 <section>
 <h3>Live GitHub Actions Examples</h3>
-<div class="badge-height"><a href="https://github.com/marketplace/actions/jacoco-badge-generator"><amp-img class="contain" layout="fill" alt="Latest release in the GitHub Marketplace" src="https://img.shields.io/github/v/release/cicirello/jacoco-badge-generator?label=Marketplace&logo=GitHub"></amp-img></a></div>
+<div class="centered badge-height"><a href="https://github.com/marketplace/actions/jacoco-badge-generator"><img alt="Latest release in the GitHub Marketplace" src="https://img.shields.io/github/v/release/cicirello/jacoco-badge-generator?label=Marketplace&logo=GitHub"></a></div>
 <p>We have a <a href="https://github.com/cicirello/examples-jacoco-badge-generator">template 
 repository</a> containing a simple Java project (Maven),
 and several runnable example workflows demonstrating the most common use-cases.
@@ -218,7 +162,7 @@ action to use it as a project starter, or to have a sample that they can fork
 and experiment with before integrating into their projects.</p>
 <p>You can also take a look at the following real projects that use the
 action.</p>
-<amp-carousel height="220" layout="fixed-height" type="carousel">
+<div class="carousel">
 <table>
 <tr><th>Repository</th><th>Workflow</th><th>Build Configuration</th></tr>
 <tr>
@@ -237,11 +181,11 @@ action.</p>
 <td><a href="https://github.com/cicirello/rho-mu/blob/main/pom.xml">pom.xml</a></td>
 </tr>
 </table>
-</amp-carousel>
+</div>
 </section>
 <section>
 <h3>Command-Line Usage</h3>
-<div class="badge-height"><a href="https://pypi.org/project/jacoco-badge-generator/"><amp-img class="contain" layout="fill" alt="Latest release on PyPI" src="https://img.shields.io/pypi/v/jacoco-badge-generator?logo=pypi"></amp-img></a></div>
+<div class="centered badge-height"><a href="https://pypi.org/project/jacoco-badge-generator/"><img alt="Latest release on PyPI" src="https://img.shields.io/pypi/v/jacoco-badge-generator?logo=pypi"></a></div>
 <p>Although the tool began its life as a GitHub Action, it can now be used as a command-line utility
 outside of GitHub Actions, such as on your local development machine.</p>
 <p><strong>Installing from PyPI:</strong> The jacoco-badge-generator requires Python 3 (and has 
@@ -323,11 +267,11 @@ Hackathon.</p>
 </section>
 </article>
 <footer>
-<small><p>
+<p><small>
 <a class="footer-link" href="https://www.cicirello.org/e/">Contact</a>
 <strong>&#x25C6;</strong>
 <a class="footer-link" href="https://www.cicirello.org/policy/privacy/">Privacy Policy</a>
-</p></small>
+</small></p>
 <div id="copyright"><small>Copyright &copy; 2021-<span itemprop="copyrightYear">2025</span> <a href="https://www.cicirello.org/">Vincent A. Cicirello</a>.</small></div>
 </footer>
 </body>
