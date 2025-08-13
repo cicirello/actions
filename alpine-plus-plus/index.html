@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html amp lang=en itemscope itemtype="http://schema.org/WebPage" itemref="logo">
+<html lang=en itemscope itemtype="http://schema.org/WebPage" itemref="logo">
 <head>
 <meta charset=utf-8>
 <link rel="canonical" href="https://actions.cicirello.org/alpine-plus-plus/">
@@ -19,15 +19,16 @@
 <meta property="og:image:height" content="640">
 <meta property="og:type" content="website">
 <meta property="og:description" content="The alpine-plus-plus Docker container is a lightweight Docker container for shell scripting with git and GNU tools (bash, coreutils, findutils, gawk). It is built atop an Alpine Linux base to keep image size small.">
-<style amp-custom>
+<style>
 header, nav, footer, article, aside, section { display: block; }
 footer { clear: both; }
 body { background-color: #f6f0bb; font-family: Arial, Helvetica, sans-serif; }
 #siteheader, aside, footer { background-color: #bfd9bf; }
 #siteheader, aside, footer, article { border: 2px solid #4CAF50; border-radius: 25px; margin: 10px; padding: 10px; }
+img.respimg { max-width: 100%; height: auto; }
 h1, h2, h3, h4, h5, h6, strong { color: #862d2d; }
-h2, h3, div.sponsor-badges { text-align:center; }
-div.sponsor-badges amp-img { margin-top: 8px; }
+h1, h2, h3, div.centered { text-align:center; }
+div.centered img { margin-top: 8px; }
 a { color: #005500; }
 a:visited { color:#862d2d; }
 #toggle { position: absolute; left: -100vw; display: none; }
@@ -47,9 +48,7 @@ article li { margin-bottom: 8px; margin-top: 8px; }
 section li { margin-bottom: 16px; }
 section ul { margin-bottom: 32px; }
 #copyright { text-align: center; color: #862d2d; }
-#logo, #backup-logo, h1 {max-width: 1280px;}
 h1 {margin: 10px auto; padding: 10px;}
-amp-img.contain img { object-fit: contain; }
 .badge-height { position: relative; width: 100%; height: 20px;}
 th { text-align: left; }
 table, th, td { border: 1px solid black; }
@@ -60,96 +59,40 @@ th, td { padding: 15px; }
 nav div a:not(.active) { display: block; }
 }
 </style>
-<style amp-boilerplate>
-  body {
-	-webkit-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
-	-moz-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
-	-ms-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
-	animation: -amp-start 8s steps(1, end) 0s 1 normal both;
-  }
-  @-webkit-keyframes -amp-start {
-	from {
-	  visibility: hidden;
-	}
-	to {
-	  visibility: visible;
-	}
-  }
-  @-moz-keyframes -amp-start {
-	from {
-	  visibility: hidden;
-	}
-	to {
-	  visibility: visible;
-	}
-  }
-  @-ms-keyframes -amp-start {
-	from {
-	  visibility: hidden;
-	}
-	to {
-	  visibility: visible;
-	}
-  }
-  @-o-keyframes -amp-start {
-	from {
-	  visibility: hidden;
-	}
-	to {
-	  visibility: visible;
-	}
-  }
-  @keyframes -amp-start {
-	from {
-	  visibility: hidden;
-	}
-	to {
-	  visibility: visible;
-	}
-  }
-</style>
-<noscript><style amp-boilerplate>
-	body {
-	  -webkit-animation: none;
-	  -moz-animation: none;
-	  -ms-animation: none;
-	  animation: none;
-	}
-  </style></noscript>
-<script async src="https://cdn.ampproject.org/v0.js"></script>
-<script async custom-element="amp-auto-ads" src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js"></script>
+
+
 </head>
 <body>
-<amp-auto-ads type="adsense"
-        data-ad-client="ca-pub-6813707428591829">
-</amp-auto-ads>
 <header itemprop="hasPart" itemscope itemtype="https://schema.org/WPHeader" id="siteheader">
 <div itemscope>
 <h1>
 <a href=".">
-<amp-img id="logo" itemprop="primaryImageOfPage" itemscope itemtype="http://schema.org/ImageObject" 
-  src="/images/alpine-plus-plus.webp" 
-  alt="alpine-plus-plus - A lightweight docker image for shell scripting with git and GNU tools" 
-  width="1280" 
-  height="640" 
-  layout="responsive"
+<picture id="logo" itemprop="primaryImageOfPage" itemscope itemtype="http://schema.org/ImageObject">
+<source 
+  type="image/webp"
   srcset="/images/alpine-plus-plus.webp 1280w,
           /images/alpine-plus-plus960.webp 960w,
           /images/alpine-plus-plus640.webp 640w,
-		  /images/alpine-plus-plus320.webp 320w">
-  <amp-img id="backup-logo"  
-    fallback
+		  /images/alpine-plus-plus320.webp 320w"
+	sizes="(width <= 320px) 320px, 
+         (width <= 640px) 640px, 
+		 (width <= 960px) 960px, 
+		 1280px">
+  <img 
     src="/images/alpine-plus-plus.png" 
     alt="alpine-plus-plus - A lightweight docker image for shell scripting with git and GNU tools" 
     width="1280" 
     height="640" 
-    layout="responsive"
+	class="respimg"
     srcset="/images/alpine-plus-plus.png 1280w,
 	        /images/alpine-plus-plus960.png 960w,
             /images/alpine-plus-plus640.png 640w,
-		    /images/alpine-plus-plus320.png 320w">
-  </amp-img>
-</amp-img>
+		    /images/alpine-plus-plus320.png 320w"
+	sizes="(width <= 320px) 320px, 
+         (width <= 640px) 640px, 
+		 (width <= 960px) 960px, 
+		 1280px">
+</picture>
 </a>
 </h1>
 <nav>
@@ -163,10 +106,10 @@ nav div a:not(.active) { display: block; }
 <div><a href="https://github.com/cicirello/alpine-plus-plus/issues">Issue Tracker</a></div>
 </nav>
 </div>
-<div class="sponsor-badges">
-<a href="https://github.com/sponsors/cicirello"><amp-img src="/images/github-sponsors.svg" alt="GitHub Sponsors" width="107" height="28">GitHub Sponsors</amp-img></a>
-<a href="https://liberapay.com/cicirello"><amp-img src="/images/Liberapay.svg" alt="Liberapay" width="119" height="28">Sponsor on Liberapay</amp-img></a>
-<a href="https://ko-fi.com/cicirello"><amp-img src="/images/ko-fi.svg" alt="Ko-Fi" width="82" height="28">Sponsor on Ko-Fi</amp-img></a>
+<div class="centered">
+<a href="https://github.com/sponsors/cicirello"><img src="/images/github-sponsors.svg" alt="GitHub Sponsors" width="107" height="28"></a>
+<a href="https://liberapay.com/cicirello"><img src="/images/Liberapay.svg" alt="Liberapay" width="119" height="28"></a>
+<a href="https://ko-fi.com/cicirello"><img src="/images/ko-fi.svg" alt="Ko-Fi" width="82" height="28"></a>
 </div>
 </header>
 <article itemprop="mainEntity" itemscope itemtype="http://schema.org/SoftwareSourceCode">
@@ -230,7 +173,7 @@ is the latest release, then <code>3</code> maps to this as well.</li>
 <h3>Usage</h3>
 <p>The pre-built image is hosted on both Docker Hub and the Github Container Registry. You can use 
 it in the following ways.</p>
-<div class="badge-height"><a href="https://hub.docker.com/r/cicirello/alpine-plus-plus"><amp-img class="contain" layout="fill" alt="Latest release on Docker Hub" src="https://img.shields.io/docker/v/cicirello/alpine-plus-plus?label=Docker%20Hub&logo=docker"></amp-img></a></div>
+<div class="centered badge-height"><a href="https://hub.docker.com/r/cicirello/alpine-plus-plus"><img alt="Latest release on Docker Hub" src="https://img.shields.io/docker/v/cicirello/alpine-plus-plus?label=Docker%20Hub&logo=docker"></a></div>
 <p><strong>Docker Pull:</strong> Pull the latest image from Docker Hub with the following (replace 
 <code>latest</code> with a specific version number if you prefer):</p>
 <pre><code>docker pull cicirello/alpine-plus-plus:latest
@@ -240,7 +183,7 @@ with a specific version number if you prefer):</p>
 <pre><code>FROM cicirello/alpine-plus-plus:latest
 # The rest of your Dockerfile would go here.
 </code></pre>
-<div class="badge-height"><a href="https://github.com/users/cicirello/packages/container/package/alpine-plus-plus"><amp-img class="contain" layout="fill" alt="Latest release in the GitHub Container Registry" src="https://img.shields.io/docker/v/cicirello/alpine-plus-plus?label=ghcr.io&logo=github"></amp-img></a></div>
+<div class="centered badge-height"><a href="https://github.com/users/cicirello/packages/container/package/alpine-plus-plus"><img alt="Latest release in the GitHub Container Registry" src="https://img.shields.io/docker/v/cicirello/alpine-plus-plus?label=ghcr.io&logo=github"></a></div>
 <p><strong>Docker Pull:</strong> Pull from the Github Container Registry with:</p>
 <pre><code>docker pull ghcr.io/cicirello/alpine-plus-plus:latest
 </code></pre>
@@ -286,11 +229,11 @@ a selection of blog posts specifically about alpine-plus-plus.</p>
 </section>
 </article>
 <footer>
-<small><p>
+<p><small>
 <a class="footer-link" href="https://www.cicirello.org/e/">Contact</a>
 <strong>&#x25C6;</strong>
 <a class="footer-link" href="https://www.cicirello.org/policy/privacy/">Privacy Policy</a>
-</p></small>
+</small></p>
 <div id="copyright"><small>Copyright &copy; 2021-<span itemprop="copyrightYear">2025</span> <a href="https://www.cicirello.org/">Vincent A. Cicirello</a>.</small></div>
 </footer>
 </body>
