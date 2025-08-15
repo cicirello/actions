@@ -7,6 +7,7 @@
 <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1">
 <meta name="title" content="jacoco-badge-generator - Coverage badges, and pull request coverage checks, from JaCoCo reports in GitHub Actions">
 <meta name="referrer" content="strict-origin-when-cross-origin">
+<meta http-equiv="Content-Security-Policy" content="object-src 'none'; script-src 'sha384-fVIYQq2SdvU+F0Ykt9A1f0/8by1AOvMDZEmSKvrmF+hgUggGeckJNCdWe/FQkpUm' 'unsafe-inline' 'unsafe-eval' 'strict-dynamic' https: http:; base-uri 'none'; style-src https://*.doubleclick.net https://*.googlesyndication.com https://fonts.googleapis.com 'unsafe-inline'; font-src fonts.gstatic.com;">
 <meta itemprop="name" content="jacoco-badge-generator - Coverage badges, and pull request coverage checks, from JaCoCo reports in GitHub Actions">
 <meta name="description" content="The jacoco-badge-generator GitHub Action parses a jacoco.csv from a JaCoCo coverage report, computes C0 and C1 coverage percentages from JaCoCo's Instructions and Branches counters, and generates badges for one or both of these (configurable with action inputs) to provide an easy to read visual summary of the code coverage of your test cases. The action supports both the basic case of a single jacoco.csv, as well as multi-module projects in which case the action can produce coverage badges from the combination of the JaCoCo reports from all modules, provided that the individual reports are independent. The jacoco-badge-generator can also optionally be used as part of a pull-request check. Specifically, you can configure it to fail the workflow run if coverage decreased relative to prior run, and/or if coverage is below a target threshold.">
 <meta itemprop="description" content="The jacoco-badge-generator GitHub Action parses a jacoco.csv from a JaCoCo coverage report, computes C0 and C1 coverage percentages from JaCoCo's Instructions and Branches counters, and generates badges for one or both of these (configurable with action inputs) to provide an easy to read visual summary of the code coverage of your test cases. The action supports both the basic case of a single jacoco.csv, as well as multi-module projects in which case the action can produce coverage badges from the combination of the JaCoCo reports from all modules, provided that the individual reports are independent. The jacoco-badge-generator can also optionally be used as part of a pull-request check. Specifically, you can configure it to fail the workflow run if coverage decreased relative to prior run, and/or if coverage is below a target threshold.">
@@ -61,8 +62,7 @@ th, td { padding: 15px; }
 nav div a:not(.active) { display: block; }
 }
 </style>
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6813707428591829"
-     crossorigin="anonymous"></script>
+<script async src="https://www.cicirello.org/js/dynamic_loader.js" integrity="sha384-fVIYQq2SdvU+F0Ykt9A1f0/8by1AOvMDZEmSKvrmF+hgUggGeckJNCdWe/FQkpUm" crossorigin="anonymous"></script>
 </head>
 <body>
 <header itemprop="hasPart" itemscope itemtype="https://schema.org/WPHeader" id="siteheader">
