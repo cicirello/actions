@@ -147,21 +147,28 @@ GitHub Action</a> is a meta-action to monitor and report the number of users of 
 GitHub Action. It generates a Shields endpoint with the count of the number of workflows 
 that use a GitHub Action. It is thus a tool for maintainers of GitHub Actions, and it 
 can be used to insert a badge with a users count into the README for a GitHub Action.
-The key features include the following:</p>
-<ul>
-<li><strong>Designed to Run on a Schedule:</strong> The intended usage is to run the 
-action on a schedule (e.g., nightly) to update the endpoint.</li>
-<li><strong>Customizable:</strong> It is configurable in a number of ways (e.g., 
+The key features include the following.</p>
+
+<p><strong>Designed to Run on a Schedule:</strong> The intended usage is to run the 
+action on a schedule (e.g., nightly) to update the endpoint.</p>
+
+<p><strong>Customizable:</strong> It is configurable in a number of ways (e.g., 
 badge color, logo, style) using action inputs, but you can also override 
-these things when you embed the badge using Shield's URL parameters.</li>
-<li><strong>Multiple Action Support:</strong> For those who maintain multiple GitHub 
+these things when you embed the badge using Shield's URL parameters.</p>
+
+<div class="container-for-ad">
+<ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-6813707428591829" data-ad-slot="2701150451"></ins>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+
+<p><strong>Multiple Action Support:</strong> For those who maintain multiple GitHub 
 Actions, the count-action-users action accepts a list of GitHub Actions as 
 an input, generating endpoints for all actions in the list. In this way, a 
 single run of the action in a single workflow in a single repository is 
 sufficient to regularly monitor the number of users of all of the actions 
 that you maintain. Or, if you prefer, you can run the action separately 
-within the repositories of each action.</li>
-</ul>
+within the repositories of each action.</p>
+
 <p>The count-action-users GitHub Action is implemented 
 in <span itemprop="programmingLanguage">Python</span>, and the
 <a href="https://github.com/cicirello/count-action-users" itemprop="codeRepository">source code 
@@ -186,6 +193,12 @@ That repository also contains JSON endpoints for generating other status badges.
 one of the relevant JSON files as a sample, 
 consider <a href="https://github.com/cicirello/endpoints/blob/main/jacoco-badge-generator.json">jacoco-badge-generator.json</a>.</p>
 </section>
+
+<div class="container-for-ad">
+<ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-6813707428591829" data-ad-slot="3571378994"></ins>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+
 <section>
 <h3>Tech Stack</h3>
 <p>The count-action-users GitHub Action utilizes the following:</p>
